@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvSplash"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#fff"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:text="开屏广告" />
+
+            <TextView
+                android:id="@+id/tvRewardVod"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="#fff"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:text="激励视频广告" />
+
+            <TextView
+                android:id="@+id/tvBanner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="#fff"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:text="Banner广告" />
+
+            <TextView
+                android:id="@+id/tvNative"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="#fff"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:text="Native广告" />
+
+            <TextView
+                android:id="@+id/tvDrawVod"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="#fff"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:text="DrawVod广告" />
+
+            <TextView
+                android:id="@+id/tvJs"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="#fff"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:text="JS广告" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="信息流原生模板广告 : " />
+
+            <TextView
+                android:id="@+id/tvInformation"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="#fff"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:text="上图下文" />
+
+            <TextView
+                android:id="@+id/tvInformationImageOnly"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="#fff"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:text="纯图信息流" />
+
+            <TextView
+                android:id="@+id/tvInformationRightImage"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="#fff"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:text="右图左文" />
+
+            <TextView
+                android:id="@+id/tvInformationLeftImage"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="#fff"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:text="左图右文" />
+
+            <TextView
+                android:id="@+id/tvInformationBottomImage"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="#fff"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:text="下图上文" />
+
+            <TextView
+                android:id="@+id/tvInformationvertric"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="#fff"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:text="竖图" />
+
+            <TextView
+                android:id="@+id/tvInformationThreeImages"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="#fff"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:text="三小图" />
+
+            <TextView
+                android:id="@+id/tvInformationTwoImageTwoText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="#fff"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:text="双图双文" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/ivSetting"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        android:background="@drawable/shape_white_ffffff_radius50"
+        android:elevation="5dp"
+        android:padding="5dp"
+        android:src="@drawable/icon_setting" />
+</RelativeLayout>

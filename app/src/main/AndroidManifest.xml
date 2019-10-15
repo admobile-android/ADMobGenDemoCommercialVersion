@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.ecookshipuji">
+
+    <!-- 广告必须的权限，AAR中已经内置 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <!-- 影响广告填充，强烈建议的权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- 最低版本号小于等于19建议添加GET_TASKS权限，因广点通或头条存在19及其以下设备没有GET_TASKS权限会有闪退情况，所以SDK内部在没有GET_TASKS权限且手机版本小于等于19情况下不会去加载这两个平台的广告 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- 为了提高广告收益，建议设置的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" />
+
+    <!-- 如果有视频相关的广告播放请务必添加-->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/admob_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/admob_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".splash.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".splash.SplashActivity2"
+            android:screenOrientation="portrait"
+            android:theme="@style/splash" />
+
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".banner.BannerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".nativead.NativeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".information.InformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".rewardvod.RewardVodActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".js.JsAdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".drawvod.DrawVodActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".drawvod.CustomDrawVodActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/admob_download_paths" />
+        </provider>
+    </application>
+
+</manifest>
