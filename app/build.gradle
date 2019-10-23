@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
 
-    compileSdkVersion 28
+    compileSdkVersion 29
 
     defaultConfig {
 
@@ -11,11 +11,11 @@ android {
 
         minSdkVersion 16
 
-        targetSdkVersion 28
+        targetSdkVersion 29
 
-        versionCode 201910091
+        versionCode 201910211
 
-        versionName "2.4.2.10091"
+        versionName "2.4.2.10211"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -78,11 +78,11 @@ dependencies {
     implementation 'com.tencent.bugly:nativecrashreport:3.7.1'
 
     // 必须的
-    implementation(name: 'admobgensdk-release-2.4.2.10091', ext: 'aar')
+    implementation(name: 'admobgensdk-release-2.4.2.10211', ext: 'aar')
     implementation(name: 'admob-release-2.4.2.1', ext: 'aar')
 
     // 广点通平台需要的
-    implementation(name: 'gdt-release-2.3.1', ext: 'aar')
+    implementation(name: 'gdt-release-2.3.1.2', ext: 'aar')
 
     // 头条广告平台所需要的
     implementation(name: 'toutiao-release-2.4.1', ext: 'aar')
