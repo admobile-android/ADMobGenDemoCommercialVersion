@@ -62,6 +62,10 @@
             android:name=".banner.BannerActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".interstitial.InterstitialActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".nativead.NativeActivity"
             android:screenOrientation="portrait" />
         <activity

@@ -9,6 +9,7 @@ import cn.ecookshipuji.banner.BannerActivity;
 import cn.ecookshipuji.drawvod.CustomDrawVodActivity;
 import cn.ecookshipuji.drawvod.DrawVodActivity;
 import cn.ecookshipuji.information.InformationActivity;
+import cn.ecookshipuji.interstitial.InterstitialActivity;
 import cn.ecookshipuji.js.JsAdActivity;
 import cn.ecookshipuji.nativead.NativeActivity;
 import cn.ecookshipuji.rewardvod.RewardVodActivity;
@@ -31,6 +32,12 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 RewardVodActivity.jumpHere(MainActivity.this);
+            }
+        });
+        findViewById(R.id.tvInterstitial).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                InterstitialActivity.jumpHere(MainActivity.this);
             }
         });
         findViewById(R.id.tvBanner).setOnClickListener(new View.OnClickListener() {

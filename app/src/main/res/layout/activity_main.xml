@@ -43,6 +43,16 @@
                 android:text="激励视频广告" />
 
             <TextView
+                android:id="@+id/tvInterstitial"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="#fff"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:text="插屏广告" />
+
+            <TextView
                 android:id="@+id/tvBanner"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
@@ -60,7 +70,7 @@
                 android:background="#fff"
                 android:elevation="5dp"
                 android:gravity="center"
-                android:text="Native广告" />
+                android:text="Native自渲染广告（已过时）" />
 
             <TextView
                 android:id="@+id/tvDrawVod"
@@ -70,7 +80,7 @@
                 android:background="#fff"
                 android:elevation="5dp"
                 android:gravity="center"
-                android:text="DrawVod广告" />
+                android:text="DrawVod广告（已过时）" />
 
             <TextView
                 android:id="@+id/tvJs"
