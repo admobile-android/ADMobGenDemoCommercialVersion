@@ -13,9 +13,9 @@ android {
 
         targetSdkVersion 29
 
-        versionCode 201912111
+        versionCode 201912092
 
-        versionName "2.4.3.12111"
+        versionName "2.4.3.12092"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -79,7 +79,7 @@ dependencies {
     implementation 'com.tencent.bugly:nativecrashreport:3.7.1'
 
     // 必须的
-    implementation(name: 'admobgensdk-release-2.4.3.12111', ext: 'aar')
+    implementation(name: 'admobgensdk-release-2.4.3.12092', ext: 'aar')
     implementation(name: 'admob-release-2.4.3.1', ext: 'aar')
     implementation(name: 'miit_mdid_1.0.10', ext: 'aar')
 
