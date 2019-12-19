@@ -21,12 +21,12 @@
   2. Gdt平台SDK优化：更新广点通的SDK为4.90.960；
   3. ADMobGenSdk优化：新增JS广告类型（支持Native和Banner以及激励视频）；
   4. 其他已知问题优化；
- 
+
 * 2019-12-09
-  1、Gdt平台SDK优化：更新广点通的SDK为4.110.980；
-  2、头条平台SDK优化：更新头条的SDK为2.5.3.2；
-  3、Mobvsita平台SDK优化：更新MobvsitaSDK为10.1.0；
-  4、ADMobGenSdk优化：新增插屏广告类型；
-  5、ADMobGenNative自渲染广告已经过时；
-  6、ADMobGenDrawVod广告已过时；
-  7、其他已知问题优化；
+  1. Gdt平台SDK优化：更新广点通的SDK为4.110.980；
+  2. 头条平台SDK优化：更新头条的SDK为2.5.3.2；
+  3. Mobvsita平台SDK优化：更新MobvsitaSDK为10.1.0；
+  4. ADMobGenSdk优化：新增插屏广告类型；
+  5. ADMobGenNative自渲染广告已经过时；
+  6. ADMobGenDrawVod广告已过时；
+  7. 其他已知问题优化；
