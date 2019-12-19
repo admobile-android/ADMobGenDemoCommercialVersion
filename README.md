@@ -4,12 +4,13 @@
 
 | SDK名称             | 最新版本号  | 最后修改时间 |
 | ------------------- | ----------- | ------------ |
-| admobgensdk-release | 2.4.1.09232 | 文本3        |
-| admob-release       | 2.4.1       | 文本6        |
-| gdt-release         | 2.3.1       |              |
-| toutiao-release     | 2.4.1       |              |
-| inmobi-release      | 1.2.1       |              |
-| mobvsita-release    | 1.2.1       |              |
+| admobgensdk-release | 2.4.3.12092 | 2019/12/09   |
+| admob-release       | 2.4.3.1     | 2019/12/09   |
+| gdt-release         | 2.3.3.1     |              |
+| baidu-release       | 1.2.3.1     |              |
+| toutiao-release     | 2.4.3.1     |              |
+| inmobi-release      | 1.2.2.1     |              |
+| mobvsita-release    | 1.2.2.1     |              |
 
 
 
@@ -20,3 +21,12 @@
   2. Gdt平台SDK优化：更新广点通的SDK为4.90.960；
   3. ADMobGenSdk优化：新增JS广告类型（支持Native和Banner以及激励视频）；
   4. 其他已知问题优化；
+ 
+* 2019-12-09
+  1、Gdt平台SDK优化：更新广点通的SDK为4.110.980；
+  2、头条平台SDK优化：更新头条的SDK为2.5.3.2；
+  3、Mobvsita平台SDK优化：更新MobvsitaSDK为10.1.0；
+  4、ADMobGenSdk优化：新增插屏广告类型；
+  5、ADMobGenNative自渲染广告已经过时；
+  6、ADMobGenDrawVod广告已过时；
+  7、其他已知问题优化；
