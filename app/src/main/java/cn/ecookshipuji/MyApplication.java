@@ -41,6 +41,7 @@ public class MyApplication extends Application {
     private static final String[] PLATFORMS = {
             ADMobGenAdPlaforms.PLAFORM_ADMOB
             , ADMobGenAdPlaforms.PLAFORM_GDT
+            , ADMobGenAdPlaforms.PLAFORM_BAIDU
             , ADMobGenAdPlaforms.PLAFORM_TOUTIAO
             , ADMobGenAdPlaforms.PLAFORM_INMOBI
             , ADMobGenAdPlaforms.PLAFORM_MOBVSITA
