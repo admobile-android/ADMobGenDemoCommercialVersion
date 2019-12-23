@@ -2,15 +2,15 @@
 
 #### 1.SDK版本号对照表
 
-| SDK名称             | 最新版本号  | 最后修改时间 |
+| SDK名称             | 最新版本号  | 第三方SDK版本 |
 | ------------------- | ----------- | ------------ |
-| admobgensdk-release | 2.4.3.12092 | 2019/12/09   |
-| admob-release       | 2.4.3.1     | 2019/12/09   |
-| gdt-release         | 2.3.3.1     |              |
-| baidu-release       | 1.2.3.1     |              |
-| toutiao-release     | 2.4.3.1     |              |
-| inmobi-release      | 1.2.2.1     |              |
-| mobvsita-release    | 1.2.2.1     |              |
+| admobgensdk-release | 2.4.3.12092 | 2.4.3.12092  |
+| admob-release       | 2.4.3.1     | 2.4.3.1      |
+| gdt-release         | 2.3.3.1     | 4.110.980    |
+| baidu-release       | 1.2.3.1     | 5.3.8        |
+| toutiao-release     | 2.4.3.1     | 2.5.3.2      |
+| inmobi-release      | 1.2.2.1     | 7.2.9        |
+| mobvsita-release    | 1.2.2.1     | 10.1.0       |
 
 
 

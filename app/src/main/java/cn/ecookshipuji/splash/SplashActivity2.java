@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
@@ -26,6 +27,9 @@ import cn.ecookshipuji.R;
 
 
 public class SplashActivity2 extends AppCompatActivity implements ADMobGenSplashAdListener {
+    /**
+     * 根据实际情况申请
+     */
     private static final String[] PERMISSIONS = {
             Manifest.permission.READ_PHONE_STATE
             , Manifest.permission.WRITE_EXTERNAL_STORAGE
@@ -52,12 +56,14 @@ public class SplashActivity2 extends AppCompatActivity implements ADMobGenSplash
         ADMobGenSDK.instance().fullScreen(this);
         setContentView(R.layout.activity_splash2);
 
-        for (String permission : PERMISSIONS) {
-            int checkSelfPermission = ContextCompat.checkSelfPermission(this, permission);
-            if (PackageManager.PERMISSION_GRANTED == checkSelfPermission) {
-                continue;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            for (String permission : PERMISSIONS) {
+                int checkSelfPermission = ContextCompat.checkSelfPermission(this, permission);
+                if (PackageManager.PERMISSION_GRANTED == checkSelfPermission) {
+                    continue;
+                }
+                permissionList.add(permission);
             }
-            permissionList.add(permission);
         }
         flContainer = (FrameLayout) findViewById(R.id.flContainer);
         initAd();
@@ -87,7 +93,6 @@ public class SplashActivity2 extends AppCompatActivity implements ADMobGenSplash
         if (requestCode == 1) {
             adMobGenSplashView.loadAd();
         }
-
     }
 
     @Override

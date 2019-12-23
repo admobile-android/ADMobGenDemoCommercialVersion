@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
@@ -24,6 +25,9 @@ import cn.ecookshipuji.MyApplication;
 import cn.ecookshipuji.R;
 
 public class SplashActivity extends Activity implements ADMobGenSplashAdListener {
+    /**
+     * 根据实际情况申请
+     */
     private static final String[] PERMISSIONS = {
             Manifest.permission.READ_PHONE_STATE
             , Manifest.permission.WRITE_EXTERNAL_STORAGE
@@ -46,14 +50,17 @@ public class SplashActivity extends Activity implements ADMobGenSplashAdListener
         ADMobGenSDK.instance().fullScreen(this);
         setContentView(R.layout.activity_splash);
 
-        // 获取没有申请的权限
-        for (String permission : PERMISSIONS) {
-            int checkSelfPermission = ContextCompat.checkSelfPermission(this, permission);
-            if (PackageManager.PERMISSION_GRANTED == checkSelfPermission) {
-                continue;
+        // 6.0及以上获取没有申请的权限
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            for (String permission : PERMISSIONS) {
+                int checkSelfPermission = ContextCompat.checkSelfPermission(this, permission);
+                if (PackageManager.PERMISSION_GRANTED == checkSelfPermission) {
+                    continue;
+                }
+                permissionList.add(permission);
             }
-            permissionList.add(permission);
         }
+
         flContainer = (FrameLayout) findViewById(R.id.flContainer);
 
         initAd();

@@ -52,6 +52,7 @@ public class NativeActivity extends Activity implements OnRefreshLoadMoreListene
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        // TODO: 2019/11/28 ADMobGenNative广告已经过时，后续将不再维护，建议使用 ADMobGenNativeUnified（自渲染2.0）广告代替，具体内容可参考NativeUnifiedActivity
         // 第二个参数是广告位序号（默认为0，用于支持单样式多广告位，无需要可以填0或者使用其他构造方法）
         adMobGenNative = new ADMobGenNative(this, MyApplication.adIndex);
         // 设置广告曝光校验最小间隔时间(0~200)，默认为200ms，在RecyclerView或ListView这种列表中不建议设置更小值，在一些特定场景（如Dialog或者固定位置可根据要求设置更小值）

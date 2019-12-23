@@ -32,18 +32,14 @@ public class NativeCustomAdapter extends RecyclerView.Adapter<NativeCustomAdapte
     private final Activity activity;
     private List<Object> mData;
 
-    public NativeCustomAdapter(Activity activity, List list) {
+    public NativeCustomAdapter(Activity activity, List<Object> list) {
         this.activity = activity;
-        mData = list;
+        this.mData = list;
     }
 
     @Override
     public int getItemCount() {
-        if (mData != null) {
-            return mData.size();
-        } else {
-            return 0;
-        }
+        return mData == null ? 0 : mData.size();
     }
 
     @Override

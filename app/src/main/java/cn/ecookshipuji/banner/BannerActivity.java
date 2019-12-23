@@ -74,8 +74,6 @@ public class BannerActivity extends Activity {
             @Override
             public void onAdClose() {
                 Log.e(TAG, "广告被关闭了 ::::: ");
-                // 释放广告资源
-                releaseBannerAd();
             }
         });
         // 把广告控件添加到容器

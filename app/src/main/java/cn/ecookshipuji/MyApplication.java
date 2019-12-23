@@ -21,10 +21,6 @@ public class MyApplication extends Application {
      */
     public static int adIndex = 0;
     /**
-     * 是否展示关闭按钮
-     */
-    public static boolean showClose = false;
-    /**
      * 是否横屏展示DrawVod广告
      */
     public static boolean horDrawVod = false;
@@ -41,8 +37,8 @@ public class MyApplication extends Application {
     private static final String[] PLATFORMS = {
             ADMobGenAdPlaforms.PLAFORM_ADMOB
             , ADMobGenAdPlaforms.PLAFORM_GDT
-            , ADMobGenAdPlaforms.PLAFORM_BAIDU
             , ADMobGenAdPlaforms.PLAFORM_TOUTIAO
+            , ADMobGenAdPlaforms.PLAFORM_BAIDU
             , ADMobGenAdPlaforms.PLAFORM_INMOBI
             , ADMobGenAdPlaforms.PLAFORM_MOBVSITA
     };
@@ -51,7 +47,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         long millis = System.currentTimeMillis();
-        ADMobGenSDK.instance().initSdk(getApplicationContext(), new ADMobGenSdkConfig.Builder()
+        ADMobGenSDK.instance().initSdk(this, new ADMobGenSdkConfig.Builder()
                 // 修改为自己的appId
                 .appId(APP_ID)
                 // PLATFORMS只需要选择所需的广告平台(其中PLAFORM_ADMOB是必须的)
@@ -62,6 +58,6 @@ public class MyApplication extends Application {
         Log.e("ADMobGen_Log", "init sdk need time : " + (System.currentTimeMillis() - millis) + "ms");
 
         // 添加bugly初始化（该初始化与广告SDK无关，广告SDK中不包含bugly相关内容，仅供Demo错误信息收集使用）
-        CrashReport.initCrashReport(getApplicationContext(), "6b2f5f5e4c", true);
+        CrashReport.initCrashReport(getApplicationContext(), "6b2f5f5e4c", BuildConfig.DEBUG);
     }
 }

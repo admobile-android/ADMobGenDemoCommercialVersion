@@ -75,11 +75,12 @@ public class CustomDrawVodActivity extends Activity {
     }
 
     private void initData() {
+        // TODO: 2019/12/3 ADMobGenDrawVod广告由于头条已没有新建广告位的入口，列入过时
         // 第二个参数是广告位序号（默认为0，用于支持单样式多广告位，无需要可以填0或者使用其他构造方法）
         // 第三个参数是16：9的视频是否铺满显示(铺满在某些非16：9手机可能会有拉伸)，默认false
         // adMobGenDrawVod = new ADMobGenDrawVod(this, MyApplication.adIndex);
         adMobGenDrawVod = new ADMobGenDrawVod(this, MyApplication.adIndex);
-        // 16：9的视频是否铺满显示(铺满在某些非16：9手机可能会有拉伸)，默认false
+        // 9：16的视频是否铺满显示(铺满在某些非9：16手机可能会有拉伸)，默认false
         adMobGenDrawVod.verVideoFullScreen(true);
         // 是否只展示视频，其他广告元素自行加载（广告标题、广告描述、广告标记(广告两个字)、广告来源（头条、广点通、艾狄墨博图标）、广告点击控件等）
         adMobGenDrawVod.onlyVideo(true);

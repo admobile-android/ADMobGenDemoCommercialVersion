@@ -52,6 +52,7 @@ public class MainActivity extends Activity {
                 NativeActivity.jumpHere(MainActivity.this);
             }
         });
+
         findViewById(R.id.tvDrawVod).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

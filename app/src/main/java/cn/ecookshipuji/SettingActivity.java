@@ -18,7 +18,6 @@ import android.widget.Toast;
  */
 public class SettingActivity extends Activity {
     private EditText etInfoIndex;
-    private CheckBox cbAdClose;
     private CheckBox cbDrawVod;
     private CheckBox cbCustomDrawVod;
     private CheckBox cbBannerGdt2;
@@ -40,7 +39,6 @@ public class SettingActivity extends Activity {
 
     private void initView() {
         etInfoIndex = findViewById(R.id.etInfoIndex);
-        cbAdClose = findViewById(R.id.cbAdClose);
         cbDrawVod = findViewById(R.id.cbDrawVod);
         cbCustomDrawVod = findViewById(R.id.cbCustomDrawVod);
         cbBannerGdt2 = findViewById(R.id.cbBannerGdt2);
@@ -60,7 +58,6 @@ public class SettingActivity extends Activity {
         if (MyApplication.adIndex > 0) {
             etInfoIndex.setText(MyApplication.adIndex + "");
         }
-        cbAdClose.setChecked(MyApplication.showClose);
         cbDrawVod.setChecked(MyApplication.horDrawVod);
         cbCustomDrawVod.setChecked(MyApplication.customDrawVod);
         cbBannerGdt2.setChecked(MyApplication.gdtBanner2);
@@ -83,7 +80,6 @@ public class SettingActivity extends Activity {
             return;
         }
         MyApplication.adIndex = index;
-        MyApplication.showClose = cbAdClose.isChecked();
         MyApplication.horDrawVod = cbDrawVod.isChecked();
         MyApplication.customDrawVod = cbCustomDrawVod.isChecked();
         MyApplication.gdtBanner2 = cbBannerGdt2.isChecked();

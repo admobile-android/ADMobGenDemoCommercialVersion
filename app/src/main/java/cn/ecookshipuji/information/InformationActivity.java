@@ -102,14 +102,14 @@ public class InformationActivity extends Activity implements OnRefreshLoadMoreLi
 
             @Override
             public void onADClose(IADMobGenInformation iadMobGenInformation) {
-                // 不一定需要，如果setShowClose(true)了建议重写该回调方法
-                Log.e(TAG, "广告关闭事件回调 ::::: ");
+                Log.e(TAG, "广告关闭回调 ::::: ");
                 removeInformationAd(iadMobGenInformation);
             }
 
             @Override
             public void onADRenderFailed(IADMobGenInformation iadMobGenInformation) {
                 // 渲染失败可以移除该广告对象
+                Log.e(TAG, "广告渲染失败回调 ::::: ");
                 removeInformationAd(iadMobGenInformation);
             }
         });
@@ -189,7 +189,7 @@ public class InformationActivity extends Activity implements OnRefreshLoadMoreLi
     }
 
     /**
-     * 释放广告视图
+     * 清除数据
      */
     private void clearData() {
         mDataList.clear();
@@ -197,7 +197,7 @@ public class InformationActivity extends Activity implements OnRefreshLoadMoreLi
     }
 
     /**
-     * 移除并释放该广告
+     * 移除该广告
      */
     private void removeInformationAd(IADMobGenInformation iadMobGenInformation) {
         if (iadMobGenInformation != null) {

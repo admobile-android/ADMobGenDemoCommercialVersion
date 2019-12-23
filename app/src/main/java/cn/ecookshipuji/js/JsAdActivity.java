@@ -34,7 +34,7 @@ public class JsAdActivity extends FragmentActivity {
         initWebView();
         setContentView(webView);
 
-        // TODO: 2019/10/9 加载网页（网页已经注入需要的广告JS）
+        // TODO: 2019/10/9 Step1 : 加载网页（网页已经注入需要的广告JS）
         webView.loadUrl("http://www.admobile.top/testjs.html");
     }
 
@@ -47,7 +47,7 @@ public class JsAdActivity extends FragmentActivity {
         }
         webSettings.setLoadWithOverviewMode(true);
         webSettings.setUseWideViewPort(true);
-        // TODO: 2019/10/9 一定要支持JS
+        // TODO: 2019/10/9 Step2 : 一定要支持JS
         webSettings.setJavaScriptEnabled(true);
         //允许SessionStorage/LocalStorage存储
         webSettings.setDomStorageEnabled(true);
@@ -69,7 +69,7 @@ public class JsAdActivity extends FragmentActivity {
         //自动加载图片
         webSettings.setLoadsImagesAutomatically(true);
 
-        // TODO: 2019/10/9 添加JS广告接口支持
+        // TODO: 2019/10/9 Step3 :  添加JS广告接口支持
         admobileJsNativeAdInterface = new AdmobileJsNativeAdInterface(this, webView);
         webView.addJavascriptInterface(admobileJsNativeAdInterface, "admobileJsNativeAdInterface");
 
@@ -77,7 +77,7 @@ public class JsAdActivity extends FragmentActivity {
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
-                // TODO: 2019/10/9 页面加载完毕的时候调用
+                // TODO: 2019/10/9 Step4 :  页面加载完毕的时候调用
                 if (admobileJsNativeAdInterface != null) {
                     admobileJsNativeAdInterface.onAdmobileJsNativeAdReady();
                 }

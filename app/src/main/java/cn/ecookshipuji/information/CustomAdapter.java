@@ -1,11 +1,5 @@
 package cn.ecookshipuji.information;
 
-/**
- * @author : ciba
- * @date : 2018/7/13
- * @description : replace your description
- */
-
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
