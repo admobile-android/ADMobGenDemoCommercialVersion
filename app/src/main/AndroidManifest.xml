@@ -19,7 +19,6 @@
     <!-- 为了提高广告收益，建议设置的权限 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" />
 
     <!-- 如果有视频相关的广告播放请务必添加-->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -70,6 +69,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".information.InformationActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait" />
         <activity
             android:name=".rewardvod.RewardVodActivity"
