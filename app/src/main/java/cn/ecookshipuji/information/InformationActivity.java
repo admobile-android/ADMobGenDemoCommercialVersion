@@ -20,6 +20,8 @@ import cn.admob.admobgensdk.ad.constant.InformationAdType;
 import cn.admob.admobgensdk.ad.information.ADMobGenInformation;
 import cn.admob.admobgensdk.ad.information.IADMobGenInformation;
 import cn.admob.admobgensdk.ad.listener.SimpleADMobGenInformationAdListener;
+import cn.admob.admobgensdk.common.ADMobGenSDK;
+import cn.admob.admobgensdk.entity.TTNativeExpressParam;
 import cn.ecookshipuji.MyApplication;
 import cn.ecookshipuji.R;
 import cn.ecookshipuji.widget.MySmartRefreshLayout;
@@ -59,10 +61,19 @@ public class InformationActivity extends Activity implements OnRefreshLoadMoreLi
 
         int informationAdType = getIntent().getIntExtra("type", InformationAdType.NORMAL);
 
+        // 建议Activity设置configChanges
         // 第三个参数是广告位序号（默认为0，用于支持单样式多广告位，无需要可以填0或者使用其他构造方法）
         adMobGenInformation = new ADMobGenInformation(this, informationAdType, MyApplication.adIndex);
-        // 如果需要关闭按钮可以设置（默认是不开启的）
-        adMobGenInformation.setShowClose(MyApplication.showClose);
+
+        // TODO: 2019/12/1之后，头条信息流只能新建模板广告，我们将无法对头条的信息流视图进行二次封装，微调也将无法支持头条，只能在后台调整。
+        // 这之前创建的头条信息流广告位可以正常使用，微调逻辑可正常
+        // TTNativeExpressParam参数为头条模板广告视图期望的宽度，小于等于0将传入屏幕宽度
+        TTNativeExpressParam ttNativeExpressParam = new TTNativeExpressParam(ADMobGenSDK.instance().getScreenWidth(this));
+        // 设置头条模板广告视图期望的高度，默认为0，0为自适应
+        ttNativeExpressParam.setHeight(0);
+        // 通过setTTNativeExpressParam方法设置为头条新版本的模板广告，在这之前(2019/12/01)创建的头条广告位或没有接入头条平台无需进行此切换
+        adMobGenInformation.setTTNativeExpressParam(ttNativeExpressParam);
+
         // 设置广告曝光校验最小间隔时间(0~200)，默认为200ms，在RecyclerView或ListView这种列表中不建议设置更小值，在一些特定场景（如Dialog或者固定位置可根据要求设置更小值）
         // adMobGenInformation.setExposureDelay(200);
 

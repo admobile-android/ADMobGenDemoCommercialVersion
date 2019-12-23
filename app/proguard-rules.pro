@@ -67,3 +67,6 @@
 -keepclassmembers class **.R$* {
     public static <fields>;
 }
+
+# OAID混淆
+-keep class com.bun.miitmdid.core.** {*;}
