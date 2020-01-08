@@ -67,8 +67,9 @@ public class InformationActivity extends Activity implements OnRefreshLoadMoreLi
 
         // TODO: 2019/12/1之后，头条信息流只能新建模板广告，我们将无法对头条的信息流视图进行二次封装，微调也将无法支持头条，只能在后台调整。
         // 这之前创建的头条信息流广告位可以正常使用，微调逻辑可正常
-        // TTNativeExpressParam参数为头条模板广告视图期望的宽度，小于等于0将传入屏幕宽度
-        TTNativeExpressParam ttNativeExpressParam = new TTNativeExpressParam(ADMobGenSDK.instance().getScreenWidth(this));
+        // TTNativeExpressParam参数为头条模板广告视图期望的宽度(单位为dp，即如果视图宽度希望是200dp则传入200)，小于等于0将传入屏幕宽度
+        int ttWidth = (int) (ADMobGenSDK.instance().getScreenWidth(this) / getResources().getDisplayMetrics().density);
+        TTNativeExpressParam ttNativeExpressParam = new TTNativeExpressParam(ttWidth);
         // 设置头条模板广告视图期望的高度，默认为0，0为自适应
         ttNativeExpressParam.setHeight(0);
         // 通过setTTNativeExpressParam方法设置为头条新版本的模板广告，在这之前(2019/12/01)创建的头条广告位或没有接入头条平台无需进行此切换
