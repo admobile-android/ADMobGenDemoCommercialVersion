@@ -33,6 +33,7 @@
 -keep class com.bytedance.sdk.openadsdk.** { *; }
 -keep class com.androidquery.callback.** {*;}
 -keep public interface com.bytedance.sdk.openadsdk.downloadnew.** {*;}
+-keep class com.pgl.sys.ces.* {*;}
 
 ## imobi广告SDK混淆
 -keepattributes SourceFile,LineNumberTable

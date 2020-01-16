@@ -1,0 +1,1152 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>ADMobGenSdk-V2.4.3.12092</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.701961); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid-page; break-before: avoid-page; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid-page; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror-scroll { overflow-y: hidden; overflow-x: auto; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; white-space: nowrap; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; border: none !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; border-width: 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; word-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; background-position: 0px 0px; background-repeat: initial initial; }
+.CodeMirror-wrap pre { word-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right-width: 30px; border-right-style: solid; border-right-color: transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right-style: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right-style: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background-color: rgba(255, 255, 0, 0.4); background-position: initial initial; background-repeat: initial initial; }
+@media print { 
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+
+</style>
+</head>
+<body class='typora-export' >
+<div  id='write'  class = 'is-mac'><h1><a name="admobile-android-sdk------接入文档-v24312092" class="md-header-anchor"></a><span>ADMobile Android Sdk——接入文档 V2.4.3.12092</span></h1><p><span> 目录 </span></p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" style="" href="#admobile-android-sdk------接入文档-v24312092">ADMobile Android Sdk——接入文档 V2.4.3.12092</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n5"><a class="md-toc-inner" style="" href="#1-概述">1. 概述</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n10"><a class="md-toc-inner" style="" href="#2-支持的广告类型">2. 支持的广告类型</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n13"><a class="md-toc-inner" style="" href="#3-修订历史">3. 修订历史</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n36"><a class="md-toc-inner" style="" href="#4-demo及sdk下载链接">4. Demo及SDK下载链接</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n42"><a class="md-toc-inner" style="" href="#5-sdk接入流程">5. SDK接入流程</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n43"><a class="md-toc-inner" style="" href="#51-添加sdk到工程中">5.1 添加SDK到工程中</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n58"><a class="md-toc-inner" style="" href="#52-oaid支持">5.2 OAID支持</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n71"><a class="md-toc-inner" style="" href="#53-权限申请">5.3 权限申请</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n75"><a class="md-toc-inner" style="" href="#54-示例工程demo导入说明">5.4 示例工程Demo导入说明</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n78"><a class="md-toc-inner" style="" href="#6-接入代码">6. 接入代码</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n79"><a class="md-toc-inner" style="" href="#61-sdk初始化">6.1 SDK初始化</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n84"><a class="md-toc-inner" style="" href="#a-nameadsplash62-开屏广告示例a">6.2 开屏广告示例</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n102"><a class="md-toc-inner" style="" href="#a-nameadbanner63-banner横幅广告示例a">6.3 Banner横幅广告示例</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n119"><a class="md-toc-inner" style="" href="#a-nameadinformation64-信息流原生模板广告示例a">6.4 信息流原生模板广告示例</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n155"><a class="md-toc-inner" style="" href="#a-nameadinterstitial65-插屏广告示例a">6.5 插屏广告示例</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n179"><a class="md-toc-inner" style="" href="#a-nameadrewardvod66-激励视频广告示例a">6.6 激励视频广告示例</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n203"><a class="md-toc-inner" style="" href="#67-drawvod广告示例-font-colorff0000已过时font">6.7 DrawVod广告示例 (已过时)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n227"><a class="md-toc-inner" style="" href="#68-原生自渲染广告示例font-colorff0000已过时）font">6.8 原生自渲染广告示例（已过时）</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n232"><a class="md-toc-inner" style="" href="#7-适配问题">7. 适配问题</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n233"><a class="md-toc-inner" style="" href="#71-android70适配">7.1 Android7.0适配</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n241"><a class="md-toc-inner" style="" href="#72-android8090适配">7.2 Android8.0、9.0适配</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n250"><a class="md-toc-inner" style="" href="#8-混淆配置">8. 混淆配置</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n255"><a class="md-toc-inner" style="" href="#9-常见问题和说明">9. 常见问题和说明</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n256"><a class="md-toc-inner" style="" href="#91-下载弹框样式修改">9.1 下载弹框样式修改</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n260"><a class="md-toc-inner" style="" href="#a-nameversiondata92-sdk版本号相关信息a">9.2 SDK版本号相关信息</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n263"><a class="md-toc-inner" style="" href="#a-namequestionanswer93-qa和错误信息对照表a">9.3 Q&amp;A和错误信息对照表</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n267"><a class="md-toc-inner" style="" href="#10商务合作">10.商务合作</a></span></p></div><div style="page-break-after:always;"></div><h2><a name="1-概述" class="md-header-anchor"></a><span>1. 概述</span></h2><p><span>尊敬的开发者朋友，欢迎您使用艾狄墨搏集合SDK。通过本文档，您可以快速完成广告SDK的集成。</span></p><blockquote><p><a href='http://101.37.118.54/dokuwiki/lib/exe/fetch.php?media=admobgensdk_android_question_answer.pdf'><span>如果您的支持库是AndroidX而非Support请点击跳转至Q&amp;A文档并参考Q&amp;A文档2.4进行适配</span></a></p></blockquote><p>&nbsp;</p><h2><a name="2-支持的广告类型" class="md-header-anchor"></a><span>2. 支持的广告类型</span></h2><table>
+  <tbody><tr>
+    <th style="width:150px">类型</th>
+    <th>简介</th>
+    <th>适用场景</th>
+  </tr>
+  <tr>
+    <td><a href="#ad_splash">开屏广告</a></td>
+    <td>开屏广告以APP启动作为曝光时机的模板广告，需要将开屏广告视图添加到承载的广告容器中，提供5s可感知广告展示</td>
+    <td>APP启动界面常会使用开屏广告</td>
+  </tr>
+  <tr>
+    <td><a href="#ad_banner">Banner广告</a></td>
+    <td>Banner广告是横向贯穿整个可视页面宽高比为640:100的模板广告，需要将Banner广告视图添加到承载的广告容器中</td>
+    <td>任意界面的固定位置，不建议放在RecyclerView、List这种滚动布局中当item</td>
+  </tr>
+  <tr>
+    <td><a href="#ad_information">信息流模板广告</a></td>
+    <td>信息流模板广告是有多种样式（上图下文、左图右文、双图双文、三小图等）的模板广告，需要将返回的广告视图添加到承载的广告容器中，支持样式微调整</td>
+    <td>信息流列表，轮播控件，固定位置都是较为适合，图例展示的仅为双图双文样式</td>
+  </tr>
+   <tr>
+    <td><a href="#ad_reward_vod">激励视频广告</a></td>
+    <td>将短视频融入到APP场景当中，用户观看短视频广告后可以给予一些应用内奖励</td>
+    <td>常出现在游戏的复活、任务等位置，或者网服类APP的一些增值服务场景</td>
+  </tr>
+   <tr>
+    <td><a href="#ad_interstitial">插屏广告</a></td>
+    <td>插屏广告是移动广告的一种常见形式，在应用流程中弹出，当应用展示插屏广告时，用户可以选择点击广告，访问其目标网址，也可以将其关闭并返回应用</td>
+    <td>在应用执行流程的自然停顿点，适合投放这类广告</td>
+  </tr>
+</tbody></table><div style="page-break-after:always;"></div><h2><a name="3-修订历史" class="md-header-anchor"></a><span>3. 修订历史</span></h2><figure><table><thead><tr><th><span>版本号</span></th><th><span>修订说明</span></th><th><span>修订时间</span></th></tr></thead><tbody><tr><td><span>2.4.1.09232</span></td><td><span>1、艾狄墨搏SDK优化，激励视频优化；</span><br><span>2、优化Admob Native原生自渲染广告和信息流原生模板广告曝光校验最小间隔时间问题；</span><br><span>3、其他已知问题修复和优化；</span></td><td><span>2019.10.08</span></td></tr><tr><td><span>2.4.2.11092</span></td><td><span>1、Admob平台SDK优化：视频播放器优化，广告请求参数新增OAID，广告上报优化等；</span><br><span>2、Gdt平台SDK优化：更新广点通的SDK为4.100.970；</span><br><span>3、头条平台SDK优化：更新头条的SDK为2.5.；</span><br><span>4、ADMobGenSdk优化；</span><br><span>5、其他已知问题优化；</span></td><td><span>2019.11.11</span></td></tr><tr><td><span>2.4.3.12092</span></td><td><span>1、ADMobGenSdk优化：新增插屏广告类型；</span><br><span>2、ADMobGenNative自渲染广告已经过时；</span><br><span>3、ADMobGenDrawVod广告已过时；</span><br><span>4、其他已知问题优化；</span></td><td><span>2019.12.09</span></td></tr></tbody></table></figure><blockquote><p><a href='http://101.37.118.54/dokuwiki/lib/exe/fetch.php?media=admobgensdkandroidchanglog.pdf'><span>对接文档仅展示最近三个版本的修订历史，全部修订历史和各版本SDK中的类、方法、变量等更新日志，请点击此链接移步历史修订文档</span></a></p></blockquote><p>&nbsp;</p><p><font color=#ff0000><span>PS1 ：更新SDK时，为防止不必要问题，请将使用到的aar文件均替换成最新的；</span><br><span>PS2 ：视频广告需要满足资源路径与ApplicationId一致，即AndroidManifest.xml中的package与build.gradle中的ApplicationId一致；</span><br><span>PS3 :  建议在适当的时机释放广告资源，例如onDestroy生命周期或者根据业务需求在合适的时机释放，释放后的广告不能再次使用；</span></font></p><p>&nbsp;</p><h2><a name="4-demo及sdk下载链接" class="md-header-anchor"></a><span>4. Demo及SDK下载链接</span></h2><blockquote><p><a href='https://github.com/admobile-android/ADMobGenDemoCommercialVersion'><span>ADMobGenDemo头条商务版链接</span></a></p><p><a href='https://github.com/admobile-android/ADMobGenDemoRegistrationVersion'><span>ADMobGenDemo头条自注册版链接</span></a></p></blockquote><p><font color=#ff0000><span>PS : 商务版和自注册版区分请咨询商务人员；</span></font></p><div style="page-break-after:always;"></div><h2><a name="5-sdk接入流程" class="md-header-anchor"></a><span>5. SDK接入流程</span></h2><h3><a name="51-添加sdk到工程中" class="md-header-anchor"></a><span>5.1 添加SDK到工程中</span></h3><p><span>接入环境：Android Studio。</span></p><p><span>Demo中libs文件目录下有所需要的依赖包，</span><font color=#ff0000><span>其中admobgensdk-release.aar和admob-release是必须的</span></font><span>，其他依赖包请根据接入平台情况进行选择接入（需要接入哪些平台，请联系对接商务人员)。将所需要的aar包拷贝到 libs 目录下，并且在build.gradle中进行相应的配置。</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="java" style="page-break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="java"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><span><span>​</span>x</span></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-variable">android</span> {</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  ....</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;<span class="cm-comment">//1. 添加依赖库目录</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;<span class="cm-variable">repositories</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">flatDir</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">dirs</span> <span class="cm-string">'libs'</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-variable">dependencies</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  ....</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">//2. 添加广告依赖包</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; <span class="cm-tab" role="presentation" cm-text="	"> </span><span class="cm-comment">// 必须的</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">compile</span>(<span class="cm-variable">name</span>: <span class="cm-string">'admobgensdk-release-x.x.x.x'</span>, <span class="cm-variable">ext</span>: <span class="cm-string">'aar'</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">compile</span>(<span class="cm-variable">name</span>: <span class="cm-string">'admob-release-x.x.x.x'</span>, <span class="cm-variable">ext</span>: <span class="cm-string">'aar'</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">// 广点通平台需要的</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">compile</span>(<span class="cm-variable">name</span>: <span class="cm-string">'gdt-release-x.x.x.x'</span>, <span class="cm-variable">ext</span>: <span class="cm-string">'aar'</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">// 头条广告平台所需要的</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">compile</span>(<span class="cm-variable">name</span>: <span class="cm-string">'toutiao-release-x.x.x.x'</span>, <span class="cm-variable">ext</span>: <span class="cm-string">'aar'</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">compile</span>(<span class="cm-variable">name</span>: <span class="cm-string">'open_ad_sdk-x.x.x.x'</span>, <span class="cm-variable">ext</span>: <span class="cm-string">'aar'</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">compile</span> <span class="cm-string">'pl.droidsonroids.gif:android-gif-drawable:1.2.6'</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">// 百度广告平台所需要的</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">implementation</span>(<span class="cm-variable">name</span>: <span class="cm-string">'baidu-release-x.x.x.x'</span>, <span class="cm-variable">ext</span>: <span class="cm-string">'aar'</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">// inmobi平台所需要的（还需要V4和RecyclerView）</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">// inmobi平台所需要picasso依赖库,不添加会导致广告无法请求</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">implementation</span>(<span class="cm-variable">name</span>: <span class="cm-string">'inmobi-release-x.x.x.x'</span>, <span class="cm-variable">ext</span>: <span class="cm-string">'aar'</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">implementation</span> <span class="cm-string">'com.squareup.picasso:picasso:2.5.2'</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">// mobvsita平台所需要的</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">implementation</span>(<span class="cm-variable">name</span>: <span class="cm-string">'mobvsita-release-x.x.x.x'</span>, <span class="cm-variable">ext</span>: <span class="cm-string">'aar'</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  }</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 814px;"></div><div class="CodeMirror-gutters" style="display: none; height: 814px;"></div></div></div></pre><p>&nbsp;</p><p><strong><span>注意事项 ：</span></strong></p><ul><li><span>如果项目中已经集成选择的广告平台的SDK，需要移除避免冲突；</span></li><li><span>需要将Android Support v4包升级到26.0.0或以上；</span></li><li><font color=#ff0000><span>头条SDK中使用的so文件仅支持四种架构：x86,x86_64,armeabi-v7a,arm64-v8a, 如果您应用中支持的架构超出这 四种，请在build.gradle中使用abiFilters选择支持的架构。如下所示： ndk { // 设置支持的 SO 库构架，注意这里要根据你的实际情况来设置 abiFilters ‘armeabi-v7a’, ‘arm64-v8a’, ‘x86’, ‘x86_64’ }；</span></font></li></ul><p>&nbsp;</p><h3><a name="52-oaid支持" class="md-header-anchor"></a><span>5.2 OAID支持</span></h3><p><strong><font color=#ff0000><span>非必须但强烈建议</span></font><span>，Android10之后IMEI等数据无法获取，这对广告投放将产生一定影响，所以移动安全联盟(MSA)提出OAID来代替IMEI参与广告投放决策，OAID的支持会在一定程度上影响广告收益；</span></strong></p><p><span>SDK中已经进行了OAID的封装，只需以下几步即可完成OAID的支持；</span></p><ol start='' ><li><p><span>导入安全联盟的OAID支持库miit_mdid_x.x.x.aar并依赖；</span></p></li><li><p><span>将Demo中assets文件下的supplierconfig.json文件复制到自己的assets目录下并按照supplierconfig.json文件中的说明进行</span><strong><span>appid</span></strong><span>(目前需要去 </span><a href=' https://dev.vivo.com.cn/'><span>vivo开发者平台</span></a><span> 申请 appid)配置，supplierconfig.json文件名不可修改；</span></p><p><font color=#ff0000><span>PS：需要更多帮助可参考目录下</span><a href=''><span>《移动智能终端补充设备标识体系统一调用SDK开发者说明文档》</span></a></font></p></li><li><p><span>添加以下混淆配置；</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="java"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="java"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">class</span> <span class="cm-def">com</span>.<span class="cm-variable">bun</span>.<span class="cm-variable">miitmdid</span>.<span class="cm-variable">core</span>.<span class="cm-operator">**</span> {<span class="cm-operator">*</span>;}</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p>&nbsp;</p></li></ol><h3><a name="53-权限申请" class="md-header-anchor"></a><span>5.3 权限申请</span></h3><p><span>  使用SDK时可能需要以下权限，为了保证使用广告的正确，请在6.0及以上的手机中使用SDK前及时申请</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="java" style="page-break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="java"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-operator">&lt;!--</span> <span class="cm-variable">广告必须的权限，AAR中已经内置</span> <span class="cm-operator">--&gt;</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-operator">&lt;</span><span class="cm-variable">uses</span><span class="cm-operator">-</span><span class="cm-variable">permission</span> <span class="cm-variable">android</span>:<span class="cm-variable">name</span><span class="cm-operator">=</span><span class="cm-string">"android.permission.INTERNET"</span> <span class="cm-operator">/&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-operator">&lt;</span><span class="cm-variable">uses</span><span class="cm-operator">-</span><span class="cm-variable">permission</span> <span class="cm-variable">android</span>:<span class="cm-variable">name</span><span class="cm-operator">=</span><span class="cm-string">"android.permission.WRITE_EXTERNAL_STORAGE"</span> <span class="cm-operator">/&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-operator">&lt;</span><span class="cm-variable">uses</span><span class="cm-operator">-</span><span class="cm-variable">permission</span> <span class="cm-variable">android</span>:<span class="cm-variable">name</span><span class="cm-operator">=</span><span class="cm-string">"android.permission.READ_EXTERNAL_STORAGE"</span> <span class="cm-operator">/&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-operator">&lt;</span><span class="cm-variable">uses</span><span class="cm-operator">-</span><span class="cm-variable">permission</span> <span class="cm-variable">android</span>:<span class="cm-variable">name</span><span class="cm-operator">=</span><span class="cm-string">"android.permission.REQUEST_INSTALL_PACKAGES"</span> <span class="cm-operator">/&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-operator">&lt;!--</span> <span class="cm-variable">影响广告填充，强烈建议的权限</span> <span class="cm-operator">--&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-operator">&lt;</span><span class="cm-variable">uses</span><span class="cm-operator">-</span><span class="cm-variable">permission</span> <span class="cm-variable">android</span>:<span class="cm-variable">name</span><span class="cm-operator">=</span><span class="cm-string">"android.permission.READ_PHONE_STATE"</span> <span class="cm-operator">/&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-operator">&lt;</span><span class="cm-variable">uses</span><span class="cm-operator">-</span><span class="cm-variable">permission</span> <span class="cm-variable">android</span>:<span class="cm-variable">name</span><span class="cm-operator">=</span><span class="cm-string">"android.permission.ACCESS_WIFI_STATE"</span> <span class="cm-operator">/&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-operator">&lt;</span><span class="cm-variable">uses</span><span class="cm-operator">-</span><span class="cm-variable">permission</span> <span class="cm-variable">android</span>:<span class="cm-variable">name</span><span class="cm-operator">=</span><span class="cm-string">"android.permission.ACCESS_NETWORK_STATE"</span> <span class="cm-operator">/&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-operator">&lt;!--</span> <span class="cm-variable">最低版本号小于等于19建议添加GET_TASKS权限，因广点通或头条存在19及其以下设备没有GET_TASKS权限会有闪退情况，所以SDK内部在没有GET_TASKS权限且手机版本小于等于19情况下不会去加载这两个平台的广告</span> <span class="cm-operator">--&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-operator">&lt;</span><span class="cm-variable">uses</span><span class="cm-operator">-</span><span class="cm-variable">permission</span> <span class="cm-variable">android</span>:<span class="cm-variable">name</span><span class="cm-operator">=</span><span class="cm-string">"android.permission.GET_TASKS"</span> <span class="cm-operator">/&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-operator">&lt;!--</span> <span class="cm-variable">为了提高广告收益，建议设置的权限</span> <span class="cm-operator">--&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-operator">&lt;</span><span class="cm-variable">uses</span><span class="cm-operator">-</span><span class="cm-variable">permission</span> <span class="cm-variable">android</span>:<span class="cm-variable">name</span><span class="cm-operator">=</span><span class="cm-string">"android.permission.ACCESS_FINE_LOCATION"</span> <span class="cm-operator">/&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-operator">&lt;</span><span class="cm-variable">uses</span><span class="cm-operator">-</span><span class="cm-variable">permission</span> <span class="cm-variable">android</span>:<span class="cm-variable">name</span><span class="cm-operator">=</span><span class="cm-string">"android.permission.ACCESS_COARSE_LOCATION"</span> <span class="cm-operator">/&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-operator">&lt;!--</span> <span class="cm-variable">如果有视频相关的广告播放请务必添加</span><span class="cm-operator">--&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-operator">&lt;</span><span class="cm-variable">uses</span><span class="cm-operator">-</span><span class="cm-variable">permission</span> <span class="cm-variable">android</span>:<span class="cm-variable">name</span><span class="cm-operator">=</span><span class="cm-string">"android.permission.WAKE_LOCK"</span> <span class="cm-operator">/&gt;</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 462px;"></div><div class="CodeMirror-gutters" style="display: none; height: 462px;"></div></div></div></pre><p>&nbsp;</p><h3><a name="54-示例工程demo导入说明" class="md-header-anchor"></a><span>5.4 示例工程Demo导入说明</span></h3><p><span>示例工程Demo请使用AndroidStudio来打开。</span></p><p>&nbsp;</p><h2><a name="6-接入代码" class="md-header-anchor"></a><span>6. 接入代码</span></h2><h3><a name="61-sdk初始化" class="md-header-anchor"></a><span>6.1 SDK初始化</span></h3><p><span>  在Application中进行SDK的初始化(详情请参考Demo)</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="java" style="page-break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="java"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">private</span> <span class="cm-keyword">static</span> <span class="cm-keyword">final</span> <span class="cm-variable-3">String</span> <span class="cm-variable">APP_ID</span> <span class="cm-operator">=</span> <span class="cm-string">"2938412"</span>;</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">private</span> <span class="cm-keyword">static</span> <span class="cm-keyword">final</span> <span class="cm-variable-3">String</span>[] <span class="cm-variable">PLATFORMS</span> <span class="cm-operator">=</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">ADMobGenAdPlaforms</span>.<span class="cm-variable">PLAFORM_ADMOB</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  , <span class="cm-variable">ADMobGenAdPlaforms</span>.<span class="cm-variable">PLAFORM_GDT</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  , <span class="cm-variable">ADMobGenAdPlaforms</span>.<span class="cm-variable">PLAFORM_TOUTIAO</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  , <span class="cm-variable">ADMobGenAdPlaforms</span>.<span class="cm-variable">PLAFORM_BAIDU</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  , <span class="cm-variable">ADMobGenAdPlaforms</span>.<span class="cm-variable">PLAFORM_INMOBI</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  , <span class="cm-variable">ADMobGenAdPlaforms</span>.<span class="cm-variable">PLAFORM_MOBVSITA</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  };</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">@Override</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">public</span> <span class="cm-variable-3">void</span> <span class="cm-def">onCreate</span>() {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">super</span>.<span class="cm-variable">onCreate</span>();</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">ADMobGenSDK</span>.<span class="cm-variable">instance</span>().<span class="cm-variable">initSdk</span>(<span class="cm-keyword">this</span>, <span class="cm-keyword">new</span> <span class="cm-variable">ADMobGenSdkConfig</span>.<span class="cm-variable">Builder</span>()</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">// 修改为自己的appId</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  .<span class="cm-variable">appId</span>(<span class="cm-variable">APP_ID</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">// PLATFORMS只需要选择所需的广告平台(其中PLAFORM_ADMOB是必须的)</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  .<span class="cm-variable">platforms</span>(<span class="cm-variable">PLATFORMS</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  .<span class="cm-variable">build</span>());</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 440px;"></div><div class="CodeMirror-gutters" style="display: none; height: 440px;"></div></div></div></pre><p><span>  </span><font color=#ff0000><span>PS ：AppId和需要接入哪些渠道的广告平台请联系对接的商务人员，初始化必须在主线程完成，SDK暂不支持多进程。</span></font></p><p>&nbsp;</p><h3><a name="a-nameadsplash62-开屏广告示例a" class="md-header-anchor"></a><a name="ad_splash"><span>6.2 开屏广告示例</span></a></h3><p><span>开屏广告加载使用方式如下，具体使用请参考Demo，开屏广告高度默认为屏幕高度的75%,可自定义高度比例,但不能低于0.75，可通过ADMobGenSDK.instance().getScreenHeight(activity)获取屏幕精确高度；</span></p><p><strong><span>ADMobGenSplashView</span></strong></p><ul><li><p><span>cn.admob.admobgensdk.ad.splash.ADMobGenSplashView</span></p><table>
+  <tbody><tr>
+  	<td style="width:40%">方法名</td>
+  	<td>方法介绍</td>
+	</tr>
+  <tr>
+  	<td>ADMobGenSplashView(Activity activity, double rate, int adIndex)</td>
+  	<td>构造方法；activity : 级别的上下文；<br>rate : 开屏广告高度占屏幕高度的比例(0.75~1或-1，-1撑满广告容器)；<br>adIndex : 广告位序号<br>				</td>
+	</tr>
+  <tr>
+  	<td>ADMobGenSplashView(Activity activity, double rate)</td>
+  	<td>构造方法，广告位序号默认为0；activity : 级别的上下文；<br>rate : 开屏广告高度占屏幕高度的比例(0.75~1或-1，-1撑满广告容器)<br>				</td>
+	</tr>
+  <tr>
+  	<td>ADMobGenSplashView(Activity activity)</td>
+  	<td>构造方法，rate默认是0.75，广告位序号默认为0；activity : 级别的上下文</td>
+	</tr>
+  <tr>
+  	<td>setListener(ADMobGenSplashAdListener listener)</td>
+  	<td>设置开屏广告监听；listener : 开屏广告监听</td>
+	</tr>
+  <tr>
+  	<td>setImmersive(boolean immersive)</td>
+  	<td>设置是否适配沉浸式；immersive : 是否适配沉浸式(true的话跳过按钮的上边距会加上状态栏高度)，不设置默认false</td>
+	</tr>
+  <tr>
+  	<td>setTimeout(long timeout)</td>
+  	<td>设置超时时间（总超时时长可能会略高于这个时间），不建议低于5000ms；timeout : 超时时长，毫秒级别，不设置默认为5000ms</td>
+	</tr>
+  <tr>
+  	<td>loadAd()</td>
+  	<td>加载开屏广告</td>
+	</tr>
+  <tr>
+  	<td>destroy()</td>
+  	<td>释放开屏广告，建议在界面销毁的时候调用</td>
+	</tr>
+</tbody></table></li></ul><p>&nbsp;</p><p><strong><span>ADMobGenSplashAdListener</span></strong></p><p><span>开屏广告回调接口</span></p><ul><li><p><span>cn.admob.admobgensdk.ad.listener.ADMobGenSplashAdListener</span></p><table>
+  <tbody><tr>
+  	<td style="width:40%">方法名</td>
+  	<td>方法介绍</td>
+	</tr>
+  <tr>
+  	<td>onADReceiv()</td>
+  	<td>开屏广告获取成功</td>
+	</tr>
+  <tr>
+  	<td>onADFailed(String error)</td>
+  	<td>开屏广告获取失败；error : 错误信息</td>
+	</tr>
+  <tr>
+  	<td>onADClick()</td>
+  	<td>开屏广告被点击</td>
+	</tr>
+  <tr>
+  	<td>onAdClose()</td>
+  	<td style="color:#ff0000">开屏广告关闭回调，不可单一在此回调进行跳转，跳转逻辑需要以下回调方法onADFailed、onADReceiv、onADClick、onAdClose和生命周期onResume、onPause配合实现，具体逻辑请参考Demo或示例</td>
+	</tr>
+  <tr>
+  	<td>onADExposure</td>
+  	<td>开屏广告曝光回调，但不一定是有效曝光，如网络问题导致曝光上报失败等</td>
+	</tr>
+</tbody></table></li></ul><blockquote><p><a href='https://github.com/admobile-android/ADMobGenDemoCommercialVersion/blob/master/app/src/main/java/cn/ecookshipuji/splash/SplashActivity.java'><span>开屏广告示例，rate为0.75~1</span></a></p><p><a href='https://github.com/admobile-android/ADMobGenDemoCommercialVersion/blob/master/app/src/main/java/cn/ecookshipuji/splash/SplashActivity2.java'><span>开屏广告示例，rate为-1</span></a></p></blockquote><p>&nbsp;</p><h3><a name="a-nameadbanner63-banner横幅广告示例a" class="md-header-anchor"></a><a name="ad_banner"><span>6.3 Banner横幅广告示例</span></a></h3><p><span>Banner广告为640:100，高度建议自适应，</span><font color=#ff0000><span>Banner广告建议放在固定位置的容器中，不建议放在ViewPager、RecyclerView、ListView或其他非固定位置的控件中。</span></font></p><p><strong><span>ADMobGenBannerView</span></strong></p><ul><li><span>cn.admob.admobgensdk.ad.banner.ADMobGenBannerView</span></li></ul><table>
+    <tbody><tr>
+    	<td style="width:40%">方法名</td>
+    	<td>方法介绍</td>
+  	</tr>
+    <tr>
+    	<td>ADMobGenBannerView(Activity activity, int adIndex)</td>
+    	<td>构造方法；activity : activity级别的上下文；<br>adIndex : 广告位序号</td>
+  	</tr>
+    <tr>
+    	<td>ADMobGenBannerView(Activity activity)</td>
+    	<td>构造方法，广告位序号默认为0；activity : activity级别的上下文</td>
+  	</tr>
+    <tr>
+    	<td>setRefreshTime(int refreshTime)</td>
+    	<td>设置刷新间隔（30s~120s，其中百度广告是30s刷新间隔且不可改变），不设置默认不刷新（不适用百度），头条Banner已经升级为模板广告，如果需要开启自动刷新，需要后台开启并设置刷新时间</td>
+  	</tr>
+    <tr>
+    	<td>setRemoveTouTiaoBannerInXiaoMiUp8(boolean removeTouTiaoBannerInXiaoMiUp8)</td>
+    	<td>测试发现安卓版本在8.0及以上部分小米手机，当APP长时间处于后台时，Bugly有几率收集到WebView相关的Native Crash信息（暂时无法手动复现），目前测试发现有可能是头条的Banner广告导致的，后续将持续跟进此问题，设置为true（默认为false）将不在安卓8.0及以上的小米手机中获取头条的Banner广告</td>
+  	</tr>
+    <tr>
+    	<td>setGdt2(boolean gdt2)</td>
+    	<td>设置广点通的Banner模式为2.0，目前默认为false，后续可能废弃并默认为true</td>
+  	</tr>
+  <tr>
+    	<td>setListener(ADMobGenBannerAdListener listener)</td>
+    	<td>设置Banner广告监听；listener : Banner广告监听</td>
+  	</tr>
+  <tr>
+    	<td>loadAd()</td>
+    	<td>加载Banner广告</td>
+  	</tr>
+  <tr>
+    	<td>destroy()</td>
+    	<td>释放广告资源，建议在Banner广告被关闭或界面销毁时调用</td>
+  	</tr>
+</tbody></table><p>&nbsp;</p><p><strong><span>ADMobGenBannerAdListener</span></strong></p><p><span>Banner广告监听回调接口</span></p><ul><li><span>cn.admob.admobgensdk.ad.listener.ADMobGenBannerAdListener</span></li></ul><table>
+    <tbody><tr>
+    	<td style="width:40%">方法名</td>
+    	<td>方法介绍</td>
+  	</tr>
+    <tr>
+    	<td>onADReceiv()</td>
+    	<td>Banner广告获取成功</td>
+  	</tr>
+    <tr>
+    	<td>onADFailed(String error)</td>
+    	<td>Banner广告获取失败；error : 错误信息</td>
+  	</tr>
+    <tr>
+    	<td>onADClick()</td>
+    	<td>Banner广告被点击</td>
+  	</tr>
+    <tr>
+    	<td>onAdClose()</td>
+    	<td>Banner广告关闭回调</td>
+  	</tr>
+    <tr>
+    	<td>onADExposure()</td>
+    	<td>Banner广告曝光回调，但不一定是有效曝光，如网络问题导致曝光上报失败等</td>
+  	</tr>
+</tbody></table><blockquote><p><a href='https://github.com/admobile-android/ADMobGenDemoCommercialVersion/blob/master/app/src/main/java/cn/ecookshipuji/banner/BannerActivity.java'><span>Banner广告示例</span></a></p></blockquote><p>&nbsp;</p><h3><a name="a-nameadinformation64-信息流原生模板广告示例a" class="md-header-anchor"></a><a name="ad_information"><span>6.4 信息流原生模板广告示例</span></a></h3><p><span>信息流原生模板广告，有丰富的广告样式（上图下文、上文下图、纯图、左图右文、左文右图、双图双文、三小图等），同时支持视频并且支持样式微调整</span></p><p><strong><span>ADMobGenInformation</span></strong></p><ul><li><span>cn.admob.admobgensdk.ad.information.ADMobGenInformation</span></li></ul><table>
+    <tbody><tr>
+    	<td style="width:40%">方法名</td>
+    	<td>方法介绍</td>
+  	</tr>
+    <tr>
+    	<td>ADMobGenInformation(Activity activity, int type, int adIndex)</td>
+    	<td>构造方法；activity : activity级别的上下文；<br>type : 信息流模板广告样式类型；<br>adIndex : 广告位序号</td>
+  	</tr>
+    <tr>
+    	<td>ADMobGenInformation(Activity activity, int type)</td>
+    	<td>构造方法，广告位序号默认为0；activity : activity级别的上下文；<br>type : 信息流模板广告样式类型；</td>
+  	</tr>
+    <tr>
+    	<td>ADMobGenInformation(Activity activity)</td>
+    	<td>构造方法，广告样式默认为ADMobGenAdType.TYPE_INFORMATION，广告位序号默认为0；activity : activity级别的上下文</td>
+  	</tr>
+    <tr>
+    	<td>setListener(SimpleADMobGenInformationAdListener listener)</td>
+    	<td>设置信息流模板广告监听</td>
+  	</tr>
+    <tr>
+    	<td>getInformationAdStyle()</td>
+      <td>获取信息流模板广告样式，用于微调整信息流模板样式（广点通模板广告跳转需要给我们样式UI后台调整），具体调整规则请参考<a href="#question_answer">QA文档</a></td>
+  	</tr>
+    <tr>
+    	<td>setShowClose(boolean showClose)</td>
+    	<td>设置是否展示信息流模板广告的关闭按钮</td>
+  	</tr>
+  <tr>
+    	<td>setExposureDelay(long exposureDelay)</td>
+    	<td>设置广告曝光校验最小间隔时间(0~200)，默认为200ms，在RecyclerView或ListView这种列表中不建议设置更小值，在一些特定场景（如Dialog或者固定位置可根据要求设置更小值）</td>
+  	</tr>
+  <tr>
+    	<td>setTTNativeExpressParam(TTNativeExpressParam ttNativeExpressParam)</td>
+    	<td style="color:#ff0000">设置头条平台的广告为模板广告（之前头条可创建自渲染广告由我们二次封装成样式统一的模板广告，2019年12月之后头条关闭了自渲染广告位的创建，均只能创建头条的模板广告，所以这个时间后新建的信息流广告位需要设置这个属性，之前创建的广告位可忽略，没有接入头条信息流模板广告可忽略；ttNativeExpressParam : 头条模板广告宽高参数）</td>
+  	</tr>
+  <tr>
+  </tr><tr>
+    	<td>loadAd()</td>
+    	<td>加载信息流模板广告</td>
+  	</tr>
+  <tr>
+    	<td>destroy()</td>
+    	<td>释放广告资源，建议在界面销毁时调用</td>
+  	</tr>
+</tbody></table><p>&nbsp;</p><p><strong><span>InformationAdType</span></strong></p><p><span>信息流模板广告样式类型</span></p><table>
+    <tbody><tr>
+    	<td style="width:40%">属性</td>
+    	<td>属性介绍</td>
+  	</tr>
+    <tr>
+    	<td>NORMAL</td>
+    	<td>上图下文，图片比例16:9</td>
+  	</tr>
+    <tr>
+    	<td>BOTTOM_IMAGE</td>
+    	<td>上文下图，图片比例16:9</td>
+  	</tr>
+    <tr>
+    	<td>LEFT_IMAGE</td>
+    	<td>左图右文，图片比例3:2</td>
+  	</tr>
+    <tr>
+    	<td>RIGHT_IMAGE</td>
+    	<td>左文右图，图片比例3:2</td>
+  	</tr>
+    <tr>
+    	<td>VERTICALPICFLOW</td>
+    	<td>竖图纯图，图片比例2:3</td>
+  	</tr>
+  <tr>
+    	<td>ONLY_IMAGE</td>
+    	<td>横图纯图，图片比例16:9</td>
+  	</tr>
+  <tr>
+    	<td>THREE_PIC_FLOW</td>
+    	<td>三小图, 图片不够时重复展示</td>
+  	</tr>
+  <tr>
+    	<td>THREE_PIC_FLOW_AUTO_FIT</td>
+    	<td>三小图, 图片不够时自动展示几张</td>
+  	</tr>
+  <tr>
+    	<td>TWO_PIC_TWO_TEXT_FLOW</td>
+    	<td>双图双文，图片比例16:9</td>
+  	</tr>
+</tbody></table><p>&nbsp;</p><p><strong><span>SimpleADMobGenInformationAdListener</span></strong></p><p><span>信息流模板广告监听回调</span></p><ul><li><span>cn.admob.admobgensdk.ad.listener.SimpleADMobGenInformationAdListener</span></li></ul><table>
+    <tbody><tr>
+    	<td style="width:40%">方法</td>
+    	<td>方法介绍</td>
+  	</tr>
+    <tr>
+    	<td>onADReceiv(IADMobGenInformation adMobGenInformation)</td>
+    	<td>广告获取成功回调；adMobGenInformation : 信息流模板广告对象</td>
+  	</tr>
+    <tr>
+    	<td>onADExposure(IADMobGenInformation adMobGenInformation)</td>
+    	<td>广告展示曝光回调，但不一定是曝光成功了，比如一些网络问题导致上报失败；adMobGenInformation : 信息流模板广告对象</td>
+  	</tr>
+    <tr>
+    	<td>onADClick(IADMobGenInformation adMobGenInformation)</td>
+    	<td>信息流模板广告被点击回调；adMobGenInformation : 被点击的广告对象</td>
+  	</tr>
+    <tr>
+    	<td>onADFailed(String error)</td>
+    	<td>信息流模板广告获取失败；error : 错误信息</td>
+  	</tr>
+    <tr>
+    	<td>onADClose(IADMobGenInformation iadMobGenInformation)</td>
+    	<td>广告关闭按钮被点击回调；iadMobGenInformation : 被点击关闭按钮的广告对象</td>
+  	</tr>
+  <tr>
+    	<td>onADRenderFailed(IADMobGenInformation iadMobGenInformation)</td>
+    	<td>信息流模板广告渲染失败；iadMobGenInformation : 渲染失败的广告对象</td>
+  	</tr>
+</tbody></table><p>&nbsp;</p><p><strong><span>IADMobGenInformation</span></strong></p><p><span>信息流模板广告对象</span></p><ul><li><span>cn.admob.admobgensdk.ad.information.IADMobGenInformation</span></li></ul><table>
+    <tbody><tr>
+    	<td style="width:40%">方法</td>
+    	<td>方法介绍</td>
+  	</tr>
+    <tr>
+    	<td>getInformationAdView()</td>
+    	<td>获取信息流模板广告视图</td>
+  	</tr>
+    <tr>
+    	<td>render()</td>
+    	<td>开始渲染信息流模板广告</td>
+  	</tr>
+    <tr>
+    	<td>destroy()</td>
+    	<td>释放信息流模板广告资源</td>
+  	</tr>
+    <tr>
+    	<td>isDestroy()</td>
+    	<td>信息流模板广告是否已被释放，被释放的信息流模板广告不可在操作</td>
+  	</tr>
+    <tr>
+    	<td>isVideo()</td>
+    	<td>判断当前信息流模板广告对象是否是视频广告</td>
+  	</tr>
+  <tr>
+    	<td>setADMobGenVideoListener(ADMobGenVideoListener videoListener)</td>
+    	<td>设置视频监听，监听回调因各个平台会有所差异（有些回调方法可能不会执行）</td>
+  	</tr>
+</tbody></table><p>&nbsp;</p><p><strong><span>TTNativeExpressParam</span></strong></p><p><span>头条信息流模板广告参数</span></p><ul><li><span>cn.admob.admobgensdk.entity.TTNativeExpressParam</span></li></ul><table>
+    <tbody><tr>
+    	<td style="width:40%">方法</td>
+    	<td>方法介绍</td>
+  	</tr>
+    <tr>
+    	<td>TTNativeExpressParam(int width)</td>
+    	<td>构造方法；width : 模板广告期望的宽度，小于等于0将会取屏幕宽度</td>
+  	</tr>
+    <tr>
+    	<td>setWidth(int width)</td>
+    	<td>设置模板广告期望的宽度；width : 模板广告期望的宽度，小于等于0将会取屏幕宽度</td>
+  	</tr>
+    <tr>
+    	<td>setHeight(int height)</td>
+    	<td>设置模板广告期望的高度；height : 模板广告期望的高度，小于等于0将会自适应</td>
+  	</tr>
+</tbody></table><blockquote><p><a href='https://github.com/admobile-android/ADMobGenDemoCommercialVersion/blob/master/app/src/main/java/cn/ecookshipuji/information/InformationActivity.java'><span>信息流模板广告示例</span></a></p></blockquote><p><font color=#ff0000><span>PS ：不建议一次获取多条广告，这样会导致广告资源的浪费（获取了很多广告但是有很大一部分没有被展示曝光，这些没有曝光的广告是没有收益的，建议可以像DEMO一样即取即用），一次获取多条广告也可能影响后续广告填充率</span></font></p><p>&nbsp;</p><h3><a name="a-nameadinterstitial65-插屏广告示例a" class="md-header-anchor"></a><a name="ad_interstitial"><span>6.5 插屏广告示例</span></a></h3><p><span>插屏广告是移动广告的一种常见形式，在应用流程中弹出，当应用展示插屏广告时，用户可以选择点击广告，访问其目标网址，也可以将其关闭并返回应用，目前支持</span><font color=#ff0000><span>广点通、头条、Mobvsita、Inmobi、艾狄墨搏</span></font></p><p><strong><span>ADMobGenInterstitial</span></strong></p><ul><li><span>cn.admob.admobgensdk.ad.interstitial.ADMobGenInterstitial</span></li></ul><table>
+    <tbody><tr>
+    	<td style="width:40%">方法</td>
+    	<td>方法介绍</td>
+  	</tr>
+    <tr>
+    	<td>ADMobGenInterstitial(Activity activity, int adIndex)</td>
+    	<td>构造函数；activity : activity级别的上下文；<br>adIndex : 广告位序号</td>
+  	</tr>
+    <tr>
+    	<td>ADMobGenInterstitial(Activity activity)</td>
+    	<td>构造方法，广告位序号默认为0；activity : activity级别的上下文</td>
+  	</tr>
+    <tr>
+    	<td>setListener(ADMobGenInterstitialAdListener listener)</td>
+    	<td>设置插屏广告监听</td>
+  	</tr>
+    <tr>
+    	<td>loadAd()</td>
+    	<td>加载插屏广告</td>
+  	</tr>
+  <tr>
+    	<td>destroy()</td>
+    	<td>释放插屏广告资源，建议界面销毁的时候调用</td>
+  	</tr>
+</tbody></table><p>&nbsp;</p><p><strong><span>ADMobGenInterstitialAdListener</span></strong></p><p><span>插屏广告监听回调接口</span></p><ul><li><span>cn.admob.admobgensdk.ad.listener.ADMobGenInterstitialAdListener</span></li></ul><table>
+    <tbody><tr>
+    	<td style="width:40%">方法</td>
+    	<td>方法介绍</td>
+  	</tr>
+    <tr>
+    	<td>onADReceive(IADMobGenInterstitial iadMobGenInterstitial)</td>
+    	<td>插屏广告获取成功回调，可在此回调之后展示插屏广告；iadMobGenInterstitial : 插屏广告对象</td>
+  	</tr>
+    <tr>
+    	<td>onADExposure(IADMobGenInterstitial iadMobGenInterstitial)</td>
+    	<td>插屏广告广告展示曝光回调，但不一定是曝光成功了，比如一些网络问题导致上报失败；iadMobGenInterstitial : 插屏广告对象</td>
+  	</tr>
+    <tr>
+    	<td>onADClick(IADMobGenInterstitial iadMobGenInterstitial)</td>
+    	<td>插屏广告被点击回调；iadMobGenInterstitial : 插屏广告对象</td>
+  	</tr>
+    <tr>
+    	<td>onADClose(IADMobGenInterstitial iadMobGenInterstitial)</td>
+    	<td>插屏广告被关闭回调；iadMobGenInterstitial : 插屏广告对象</td>
+  	</tr>
+  <tr>
+    	<td>onADFailed(String error)</td>
+    	<td>插屏广告获取失败回调；error : 失败信息</td>
+  	</tr>
+</tbody></table><p>&nbsp;</p><p><strong><span>IADMobGenInterstitial</span></strong></p><p><span>插屏广告对象</span></p><ul><li><span>cn.admob.admobgensdk.entity.IADMobGenInterstitial</span></li></ul><table>
+    <tbody><tr>
+    	<td style="width:40%">方法</td>
+    	<td>方法介绍</td>
+  	</tr>
+    <tr>
+    	<td>hasShown()</td>
+    	<td>返回插屏广告是否已经展示过，展示过的插屏不能再次展示</td>
+  	</tr>
+    <tr>
+    	<td>hasExpired()</td>
+    	<td>获取插屏广告是否已经过期，过期的插屏广告不能展示</td>
+  	</tr>
+    <tr>
+    	<td>show(Activity activity)</td>
+    	<td>展示插屏广告；activity : activity级别的上下文</td>
+  	</tr>
+</tbody></table><blockquote><p><a href='https://github.com/admobile-android/ADMobGenDemoCommercialVersion/blob/master/app/src/main/java/cn/ecookshipuji/interstitial/InterstitialActivity.java'><span>插屏广告示例</span></a></p></blockquote><p>&nbsp;</p><h3><a name="a-nameadrewardvod66-激励视频广告示例a" class="md-header-anchor"></a><a name="ad_reward_vod"><span>6.6 激励视频广告示例</span></a></h3><p><span>将短视频融入到APP场景当中，用户观看短视频广告后可以给予一些应用内奖励</span></p><p><strong><span>ADMobGenRewardVod</span></strong></p><ul><li><span>cn.admob.admobgensdk.ad.rewardvod.ADMobGenRewardVod</span></li></ul><table>
+    <tbody><tr>
+    	<td style="width:40%">方法</td>
+    	<td>方法介绍</td>
+  	</tr>
+    <tr>
+    	<td>ADMobGenRewardVod(Activity activity, int adIndex)</td>
+    	<td>构造函数；activity : activity级别的上下文；<br>adIndex : 广告位序号</td>
+  	</tr>
+    <tr>
+    	<td>ADMobGenRewardVod(Activity activity)</td>
+    	<td>构造方法，广告位序号默认为0；activity : activity级别的上下文</td>
+  	</tr>
+    <tr>
+    	<td>setListener(SimpleADMobGenRewardVodAdListener listener)</td>
+    	<td>设置激励视频广告监听</td>
+  	</tr>
+    <tr>
+    	<td>loadAd()</td>
+    	<td>加载激励视频广告</td>
+  	</tr>
+  <tr>
+    	<td>destroy()</td>
+    	<td>释放激励视频广告资源，建议界面销毁的时候调用</td>
+  	</tr>
+</tbody></table><p>&nbsp;</p><p><strong><span>SimpleADMobGenRewardVodAdListener</span></strong></p><p><span>激励视频广告监听回调接口</span></p><ul><li><span>cn.admob.admobgensdk.ad.listener.SimpleADMobGenRewardVodAdListener</span></li></ul><table>
+    <tbody><tr>
+    	<td style="width:40%">方法</td>
+    	<td>方法介绍</td>
+  	</tr>
+    <tr>
+    	<td>onADReceiv(IADMobGenRewardVod iadMobGenRewardVod)</td>
+    	<td style="color:#ff0000">激励视频广告获取成功回调，除Mobvsita平台外的激励视频可以在此回调之后展示激励视频；iadMobGenRewardVod : 激励视频广告对象</td>
+  	</tr>
+  <tr>
+    	<td>onVideoCached(IADMobGenRewardVod iadMobGenRewardVod)</td>
+    	<td style="color:#ff0000">激励视频广告视频缓存完毕回调，可以在此回调之后展示激励视频；iadMobGenRewardVod : 激励视频广告对象</td>
+  	</tr>
+    <tr>
+    	<td>onADExposure(IADMobGenRewardVod iadMobGenRewardVod)</td>
+    	<td>激励视频广告广告展示曝光回调，但不一定是曝光成功了，比如一些网络问题导致上报失败；iadMobGenRewardVod : 激励视频广告对象</td>
+  	</tr>
+    <tr>
+    	<td>onADClick(IADMobGenRewardVod iadMobGenRewardVod)</td>
+    	<td>激励视频广告被点击回调；iadMobGenRewardVod : 激励视频广告对象</td>
+  	</tr>
+  <tr>
+    	<td>onReward(IADMobGenRewardVod iadMobGenRewardVod)</td>
+    	<td>激励视频广告奖励回调；iadMobGenRewardVod : 激励视频广告对象</td>
+  	</tr>
+    <tr>
+    	<td>onVideoComplete(IADMobGenRewardVod iadMobGenRewardVod)</td>
+    	<td>激励视频广告视频播放完成回调；iadMobGenRewardVod : 激励视频广告对象</td>
+  	</tr>
+  <tr>
+    	<td>onADClose(IADMobGenRewardVod iadMobGenRewardVod)</td>
+    	<td>激励视频广告被关闭回调；iadMobGenRewardVod : 激励视频广告对象</td>
+  	</tr>
+  <tr>
+    	<td>onADFailed(String error)</td>
+    	<td>激励视频广告获取失败回调；error : 失败信息</td>
+  	</tr>
+</tbody></table><p>&nbsp;</p><p><strong><span>IADMobGenRewardVod</span></strong></p><p><span>激励视频广告对象</span></p><ul><li><span>cn.admob.admobgensdk.entity.IADMobGenRewardVod</span></li></ul><table>
+    <tbody><tr>
+    	<td style="width:40%">方法</td>
+    	<td>方法介绍</td>
+  	</tr>
+    <tr>
+    	<td>hasShown()</td>
+    	<td>返回激励视频广告是否已经展示过，展示过的激励视频广告不能再次展示</td>
+  	</tr>
+    <tr>
+    	<td>hasExpired()</td>
+    	<td>获取激励视频广告是否已经过期，过期的激励视频广告不能展示</td>
+  	</tr>
+    <tr>
+    	<td>showRewardVideo(Activity activity)</td>
+    	<td>展示激励视频广告；activity : activity级别的上下文</td>
+  	</tr>
+</tbody></table><blockquote><p><a href='https://github.com/admobile-android/ADMobGenDemoCommercialVersion/blob/master/app/src/main/java/cn/ecookshipuji/rewardvod/RewardVodActivity.java'><span>激励视频广告示例</span></a></p></blockquote><p>&nbsp;</p><h3><a name="67-drawvod广告示例-font-colorff0000已过时font" class="md-header-anchor"></a><span>6.7 DrawVod广告示例 </span><font color=#ff0000><span>(已过时)</span></font></h3><p><span>类似抖音小视频一样的沉浸式视频广告类型，目前仅支持头条</span></p><p><strong><span>ADMobGenDrawVod</span></strong></p><ul><li><span>cn.admob.admobgensdk.ad.drawvod.ADMobGenDrawVod</span></li></ul><table>
+    <tbody><tr>
+    	<td style="width:40%">方法</td>
+    	<td>方法介绍</td>
+  	</tr>
+    <tr>
+    	<td>ADMobGenDrawVod(Activity activity, int adIndex)</td>
+    	<td>构造函数；activity : activity级别的上下文；<br>adIndex : 广告位序号</td>
+  	</tr>
+    <tr>
+    	<td>ADMobGenDrawVod(Activity activity)</td>
+    	<td>构造方法，广告位序号默认为0；activity : activity级别的上下文</td>
+  	</tr>
+  <tr>
+    	<td>verVideoFullScreen(boolean verVideoFullScreen)</td>
+    	<td>设置竖版视频是否全屏展示，异性屏可能会存在拉伸的问题</td>
+  	</tr>
+  <tr>
+    	<td>onlyVideo(boolean onlyVideo)</td>
+    	<td>是否只展示视频，其他广告元素自行加载（广告标题、广告描述、广告标记(广告两个字)、广告来源（头条、广点通、艾狄墨博图标）、广告点击控件等）</td>
+  	</tr>
+    <tr>
+    	<td>setListener(ADMobGenDrawVodListener listener)</td>
+    	<td>设置沉浸式视频广告监听</td>
+  	</tr>
+    <tr>
+    	<td>loadAd(int count) </td>
+    	<td>加载count（1~3）条沉浸式视频广告</td>
+  	</tr>
+   <tr>
+    	<td>loadAd()</td>
+    	<td>加载一条沉浸式视频广告</td>
+  	</tr>
+  <tr>
+    	<td>destroy()</td>
+    	<td>释放沉浸式视频广告资源，建议界面销毁的时候调用</td>
+  	</tr>
+</tbody></table><p>&nbsp;</p><p><strong><span>ADMobGenDrawVodListener</span></strong></p><p><span>沉浸式视频广告监听回调接口</span></p><ul><li><span>cn.admob.admobgensdk.ad.listener.ADMobGenDrawVodListener</span></li></ul><table>
+    <tbody><tr>
+    	<td style="width:40%">方法</td>
+    	<td>方法介绍</td>
+  	</tr>
+    <tr>
+    	<td>onADReceiv(List<iadmobgendrawvod> drawVodList)</iadmobgendrawvod></td>
+    	<td>获取沉浸式视频广告成功回调；drawVodList : 沉浸式视频广告对象列表，列表长度小于等于load个数</td>
+  	</tr>
+    <tr>
+    	<td>onADExposure(IADMobGenDrawVod drawVod)</td>
+    	<td>沉浸式视频广告广告展示曝光回调，但不一定是曝光成功了，比如一些网络问题导致上报失败；drawVod : 沉浸式视频广告对象</td>
+  	</tr>
+    <tr>
+    	<td>onADClick(IADMobGenDrawVod drawVod)</td>
+    	<td>沉浸式视频广告被点击回调；drawVod : 沉浸式视频广告对象</td>
+  	</tr>
+  <tr>
+    	<td>onADFailed(String error)</td>
+    	<td>沉浸式视频广告获取失败回调；error : 失败信息</td>
+  	</tr>
+</tbody></table><p>&nbsp;</p><p><strong><span>IADMobGenDrawVod</span></strong></p><p><span>沉浸式视频广告对象</span></p><ul><li><span>cn.admob.admobgensdk.entity.IADMobGenDrawVod</span></li></ul><table>
+    <tbody><tr>
+    	<td style="width:40%">方法</td>
+    	<td>方法介绍</td>
+  	</tr>
+    <tr>
+    	<td>getView()</td>
+    	<td>获取沉浸式视频广告视图，isOnly为true的话仅展示视频</td>
+  	</tr>
+    <tr>
+    	<td>getImage()</td>
+    	<td>获取沉浸式视频广告图片</td>
+  	</tr>
+  <tr>
+    	<td>getTitle()</td>
+    	<td>获取沉浸式视频广告标题</td>
+  	</tr>
+  <tr>
+    	<td>getDes()</td>
+    	<td>获取沉浸式视频广告描述</td>
+  	</tr>
+  <tr>
+    	<td>getAction()</td>
+    	<td>获取沉浸式视频广告活动类型（查看详情、拨打电话、立即下载之类的）</td>
+  	</tr>
+  <tr>
+    	<td>getPlatform()</td>
+    	<td>获取沉浸式视频广告来源平台</td>
+  	</tr>
+  <tr>
+    	<td>render(List<view> clickView)</view></td>
+    	<td>渲染沉浸式视频广告；clickView : 响应广告点击事件的控件</td>
+  	</tr>
+  <tr>
+    	<td>render(List<view> clickView)</view></td>
+    	<td>渲染沉浸式视频广告；clickView : 其他响应广告点击事件的控件</td>
+  	</tr>
+  <tr>
+    	<td>render()</td>
+    	<td>渲染沉浸式视频广告</td>
+  	</tr>
+  <tr>
+    	<td>destroy()</td>
+    	<td>释放资源</td>
+  	</tr>
+    <tr>
+    	<td>setADMobGenVideoListener(ADMobGenDrawVodVideoListener videoListener)</td>
+    	<td>设置沉浸式视频播放监听；videoListener : 沉浸式视频播放监听</td>
+  	</tr>
+</tbody></table><blockquote><p><a href='https://github.com/admobile-android/ADMobGenDemoCommercialVersion/blob/master/app/src/main/java/cn/ecookshipuji/drawvod/DrawVodActivity.java'><span>沉浸式视频广告示例</span></a></p></blockquote><p>&nbsp;</p><h3><a name="68-原生自渲染广告示例font-colorff0000已过时）font" class="md-header-anchor"></a><span>6.8 原生自渲染广告示例</span><font color=#ff0000><span>（已过时）</span></font></h3><p><span>目前仅支持头条和Admobile，需要商务协商，详情请参考Demo</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="java" style="page-break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="java"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// adMobGenNative = new ADMobGenNative(this);</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// 第二个参数是广告位序号（默认为0，用于支持单样式多广告位，无需要可以填0或者使用其他构造方法）</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">adMobGenNative</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">ADMobGenNative</span>(<span class="cm-keyword">this</span>, <span class="cm-variable">MyApplication</span>.<span class="cm-variable">adIndex</span>);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">adMobGenNative</span>.<span class="cm-variable">setListener</span>(<span class="cm-keyword">new</span> <span class="cm-variable">ADMobGenNativeListener</span>() {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-meta">@Override</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">public</span> <span class="cm-variable-3">void</span> <span class="cm-variable">onADReceiv</span>(<span class="cm-variable">List</span><span class="cm-operator">&lt;</span><span class="cm-variable">IADMobGenNativeAd</span><span class="cm-operator">&gt;</span> <span class="cm-variable">nativeAdList</span>) {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-tab" role="presentation" cm-text="	">  </span> <span class="cm-tab" role="presentation" cm-text="	"> </span><span class="cm-variable">Log</span>.<span class="cm-variable">e</span>(<span class="cm-variable">TAG</span>, <span class="cm-string">"广告获取成功 ::::: "</span>);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">finishLoad</span>(<span class="cm-variable">nativeAdList</span>);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-meta">@Override</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">public</span> <span class="cm-variable-3">void</span> <span class="cm-variable">onADClick</span>(<span class="cm-variable">IADMobGenNativeAd</span> <span class="cm-variable">iadMobGenNativeAd</span>) {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">Log</span>.<span class="cm-variable">e</span>(<span class="cm-variable">TAG</span>, <span class="cm-string">"广告被点击 ::::: "</span>);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-meta">@Override</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">public</span> <span class="cm-variable-3">void</span> <span class="cm-variable">onADExposure</span>(<span class="cm-variable">IADMobGenNativeAd</span> <span class="cm-variable">iadMobGenNativeAd</span>) {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">Log</span>.<span class="cm-variable">e</span>(<span class="cm-variable">TAG</span>, <span class="cm-string">"广告展示曝光回调，但不一定是曝光成功了，比如一些网络问题导致上报失败 <span class="cm-tab" role="presentation" cm-text="	"> </span>::::: "</span>);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-meta">@Override</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">public</span> <span class="cm-variable-3">void</span> <span class="cm-variable">onADFailed</span>(<span class="cm-variable-3">String</span> <span class="cm-variable">error</span>) {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">Log</span>.<span class="cm-variable">e</span>(<span class="cm-variable">TAG</span>, <span class="cm-string">"广告数据获取失败时回调 ::::: "</span> <span class="cm-operator">+</span> <span class="cm-variable">error</span>);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">finishLoad</span>(<span class="cm-atom">null</span>);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">});</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 572px;"></div><div class="CodeMirror-gutters" style="display: none; height: 572px;"></div></div></div></pre><p><font color=#ff0000><span>PS ：具体的请参考Demo，onADClick和onADExposure只有IADMobGenNativeAd 调用registerViewForInteraction之后才会回调（registerViewForInteraction一定需要调用，这将会影响收益）。</span></font></p><p>&nbsp;</p><h2><a name="7-适配问题" class="md-header-anchor"></a><span>7. 适配问题</span></h2><h3><a name="71-android70适配" class="md-header-anchor"></a><span>7.1 Android7.0适配</span></h3><p><span>适配Anroid7.0以及以上，请在AndroidManifest中添加如下代码：</span></p><p><a href='http://101.37.118.54/dokuwiki/lib/exe/fetch.php?media=admobgensdk_android_question_answer.pdf'><span>如果您的支持库是AndroidX而非Support请点击跳转至Q&amp;A文档并参考Q&amp;A文档2.4进行适配</span></a></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="java"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="java"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-operator">&lt;</span><span class="cm-variable">provider</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;<span class="cm-variable">android</span>:<span class="cm-variable">name</span><span class="cm-operator">=</span><span class="cm-string">"android.support.v4.content.FileProvider"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;<span class="cm-variable">android</span>:<span class="cm-variable">authorities</span><span class="cm-operator">=</span><span class="cm-string">"${applicationId}.fileprovider"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;<span class="cm-variable">android</span>:<span class="cm-variable">exported</span><span class="cm-operator">=</span><span class="cm-string">"false"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;<span class="cm-variable">android</span>:<span class="cm-variable">grantUriPermissions</span><span class="cm-operator">=</span><span class="cm-string">"true"</span><span class="cm-operator">&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; <span class="cm-operator">&lt;</span><span class="cm-variable">meta</span><span class="cm-operator">-</span><span class="cm-variable">data</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">android</span>:<span class="cm-variable">name</span><span class="cm-operator">=</span><span class="cm-string">"android.support.FILE_PROVIDER_PATHS"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">android</span>:<span class="cm-variable">resource</span><span class="cm-operator">=</span><span class="cm-string">"@xml/file_paths"</span> <span class="cm-operator">/&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-operator">&lt;/</span><span class="cm-variable">provider</span><span class="cm-operator">&gt;</span> &nbsp; &nbsp;</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 198px;"></div><div class="CodeMirror-gutters" style="display: none; height: 198px;"></div></div></div></pre><p><span>在res / xml目录下(如果xml目录不存在需要手动创建)，新建XML文件file_paths，在该文件中替换如下代码：</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="java"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="java"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-operator">&lt;?</span><span class="cm-variable">xml</span> <span class="cm-variable">version</span><span class="cm-operator">=</span><span class="cm-string">"1.0"</span> <span class="cm-variable">encoding</span><span class="cm-operator">=</span><span class="cm-string">"utf-8"</span><span class="cm-operator">?&gt;</span> &nbsp;</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-operator">&lt;</span><span class="cm-variable">paths</span> <span class="cm-variable">xmlns</span>:<span class="cm-variable">android</span><span class="cm-operator">=</span><span class="cm-string">"http://schemas.android.com/apk/res/android"</span><span class="cm-operator">&gt;</span> &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;<span class="cm-operator">&lt;</span><span class="cm-variable">external</span><span class="cm-operator">-</span><span class="cm-variable">path</span> <span class="cm-variable">name</span><span class="cm-operator">=</span><span class="cm-string">"external_path"</span> <span class="cm-variable">path</span><span class="cm-operator">=</span><span class="cm-string">"."</span> <span class="cm-operator">/&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;<span class="cm-operator">&lt;</span><span class="cm-variable">external</span><span class="cm-operator">-</span><span class="cm-variable">files</span><span class="cm-operator">-</span><span class="cm-variable">path</span> <span class="cm-variable">name</span><span class="cm-operator">=</span><span class="cm-string">"external_files_path"</span> <span class="cm-variable">path</span><span class="cm-operator">=</span><span class="cm-string">"."</span> <span class="cm-operator">/&gt;</span> &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-operator">&lt;/</span><span class="cm-variable">paths</span><span class="cm-operator">&gt;</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 110px;"></div><div class="CodeMirror-gutters" style="display: none; height: 110px;"></div></div></div></pre><p><span> </span><font color=#ff0000><span>PS  :  为了适配下载和安装相关功能，在工程中引用的包 com.android.support:support-v4:26.0.0请 使用26.0.0及以上版本。</span></font></p><p>&nbsp;</p><h3><a name="72-android8090适配" class="md-header-anchor"></a><span>7.2 Android8.0、9.0适配</span></h3><ul><li><p><span>需要在 AndroidManifest.xml 增加权限声明 android.permission.REQUEST_INSTALL_PACKAGES，详情见前面添加权限声明部分。</span></p></li><li><p><span>需要在 AndroidManifest.xml 添加依赖声明 uses-library android:name=&quot;org.apache.http.legacy&quot; android:required=&quot;false&quot;， 且 application标签中添加 android:usesCleartextTraffic=&quot;true&quot;，适配网络http请求，否则 SDK 无法工作，接入代码示例如下：</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="java"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="java"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">&lt;</span><span class="cm-variable">application</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">android</span>:<span class="cm-variable">name</span><span class="cm-operator">=</span><span class="cm-string">".MyApplication"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  ... ...</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">android</span>:<span class="cm-variable">usesCleartextTraffic</span><span class="cm-operator">=</span><span class="cm-string">"true"</span><span class="cm-operator">&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-operator">&lt;</span><span class="cm-variable">uses</span><span class="cm-operator">-</span><span class="cm-variable">library</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">android</span>:<span class="cm-variable">name</span><span class="cm-operator">=</span><span class="cm-string">"org.apache.http.legacy"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">android</span>:<span class="cm-variable">required</span><span class="cm-operator">=</span><span class="cm-string">"false"</span> <span class="cm-operator">/&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  ... ...</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-operator">&lt;/</span><span class="cm-variable">application</span><span class="cm-operator">&gt;</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 220px;"></div><div class="CodeMirror-gutters" style="display: none; height: 220px;"></div></div></div></pre><p>&nbsp;</p></li></ul><h2><a name="8-混淆配置" class="md-header-anchor"></a><span>8. 混淆配置</span></h2><p><span> 艾狄墨搏sdk内部已经混淆，因此在混淆之前添加以下配置</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="java" style="page-break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="java"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">ignorewarnings</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">#</span> <span class="cm-variable">v4、v7</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">class</span> <span class="cm-def">android</span>.<span class="cm-variable">support</span>.<span class="cm-variable">v4</span>.<span class="cm-operator">**</span>{<span class="cm-keyword">public</span> <span class="cm-operator">*</span>;}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">class</span> <span class="cm-def">android</span>.<span class="cm-variable">support</span>.<span class="cm-variable">v7</span>.<span class="cm-operator">**</span>{<span class="cm-keyword">public</span> <span class="cm-operator">*</span>;}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">##</span> <span class="cm-variable">资源文件混淆配置</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">class</span> <span class="cm-operator">**</span>.<span class="cm-variable">R$</span><span class="cm-operator">*</span> { <span class="cm-operator">*</span>; }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">public</span> <span class="cm-keyword">class</span> <span class="cm-operator">**</span>.<span class="cm-variable">R$</span><span class="cm-operator">*</span>{</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; <span class="cm-keyword">public</span> <span class="cm-keyword">static</span> <span class="cm-keyword">final</span> <span class="cm-variable-3">int</span> <span class="cm-operator">*</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keepclassmembers</span> <span class="cm-keyword">class</span> <span class="cm-operator">**</span>.<span class="cm-variable">R$</span><span class="cm-operator">*</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">public</span> <span class="cm-keyword">static</span> <span class="cm-operator">&lt;</span><span class="cm-variable">fields</span><span class="cm-operator">&gt;</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">#</span> <span class="cm-variable">ADMobGenSdk混淆</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">dontwarn</span> <span class="cm-variable">cn</span>.<span class="cm-variable">admob</span>.<span class="cm-variable">admobgensdk</span>.<span class="cm-operator">**</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">class</span> <span class="cm-def">cn</span>.<span class="cm-variable">admob</span>.<span class="cm-variable">admobgensdk</span>.<span class="cm-operator">**</span>{<span class="cm-operator">*</span>;}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">interface</span> <span class="cm-def">cn</span>.<span class="cm-variable">admob</span>.<span class="cm-variable">admobgensdk</span>.<span class="cm-operator">**</span>{<span class="cm-operator">*</span>;}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">class</span> <span class="cm-def">com</span>.<span class="cm-variable">android</span>.<span class="cm-operator">**</span>{<span class="cm-operator">*</span>;}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">class</span> <span class="cm-def">com</span>.<span class="cm-variable">ciba</span>.<span class="cm-operator">**</span>{ <span class="cm-operator">*</span>; }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">interface</span> <span class="cm-def">com</span>.<span class="cm-variable">ciba</span>.<span class="cm-operator">**</span>{ <span class="cm-operator">*</span>; }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">dontwarn</span> <span class="cm-variable">org</span>.<span class="cm-variable">apache</span>.<span class="cm-variable">commons</span>.<span class="cm-operator">**</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">class</span> <span class="cm-def">org</span>.<span class="cm-variable">apache</span>.<span class="cm-operator">**</span>{<span class="cm-operator">*</span>;}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">#</span> <span class="cm-variable">OAID混淆</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">class</span> <span class="cm-def">com</span>.<span class="cm-variable">bun</span>.<span class="cm-variable">miitmdid</span>.<span class="cm-variable">core</span>.<span class="cm-operator">**</span> {<span class="cm-operator">*</span>;}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">#</span> <span class="cm-variable">AdMob广告SDK混淆</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">class</span> <span class="cm-def">admsdk</span>.<span class="cm-variable">library</span>.<span class="cm-operator">**</span>{<span class="cm-operator">*</span>;}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">#</span> <span class="cm-variable">广点通广告SDK混淆</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">class</span> <span class="cm-def">com</span>.<span class="cm-variable">qq</span>.<span class="cm-variable">e</span>.<span class="cm-operator">**</span> {<span class="cm-keyword">public</span> <span class="cm-keyword">protected</span> <span class="cm-operator">*</span>;}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">class</span> <span class="cm-def">MTT</span>.<span class="cm-variable">ThirdAppInfoNew</span> {<span class="cm-operator">*</span>;}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">class</span> <span class="cm-def">com</span>.<span class="cm-variable">tencent</span>.<span class="cm-operator">**</span> {<span class="cm-operator">*</span>;}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">#</span> <span class="cm-variable">百度广告SDK混淆</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keepclassmembers</span> <span class="cm-keyword">class</span> <span class="cm-operator">*</span> <span class="cm-keyword">extends</span> <span class="cm-variable">android</span>.<span class="cm-variable">app</span>.<span class="cm-variable">Activity</span> {<span class="cm-keyword">public</span> <span class="cm-variable-3">void</span> <span class="cm-operator">*</span>(<span class="cm-variable">android</span>.<span class="cm-variable">view</span>.<span class="cm-variable">View</span>);}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keepclassmembers</span> <span class="cm-keyword">enum</span> <span class="cm-operator">*</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">public</span> <span class="cm-keyword">static</span> <span class="cm-operator">**</span>[] <span class="cm-variable">values</span>();</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">public</span> <span class="cm-keyword">static</span> <span class="cm-operator">**</span> <span class="cm-variable">valueOf</span>(<span class="cm-variable">java</span>.<span class="cm-variable">lang</span>.<span class="cm-variable-3">String</span>);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">class</span> <span class="cm-def">com</span>.<span class="cm-variable">baidu</span>.<span class="cm-variable">mobads</span>.<span class="cm-operator">*</span>.<span class="cm-operator">**</span>{<span class="cm-operator">*</span>;}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">##</span> <span class="cm-variable">头条广告混淆</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">class</span> <span class="cm-def">com</span>.<span class="cm-variable">bytedance</span>.<span class="cm-variable">sdk</span>.<span class="cm-variable">openadsdk</span>.<span class="cm-operator">**</span> { <span class="cm-operator">*</span>; }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">class</span> <span class="cm-def">com</span>.<span class="cm-variable">androidquery</span>.<span class="cm-variable">callback</span>.<span class="cm-operator">**</span> {<span class="cm-operator">*</span>;}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">public</span> <span class="cm-keyword">interface</span> <span class="cm-def">com</span>.<span class="cm-variable">bytedance</span>.<span class="cm-variable">sdk</span>.<span class="cm-variable">openadsdk</span>.<span class="cm-variable">downloadnew</span>.<span class="cm-operator">**</span> {<span class="cm-operator">*</span>;}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">class</span> <span class="cm-def">com</span>.<span class="cm-variable">ss</span>.<span class="cm-variable">sys</span>.<span class="cm-variable">ces</span>.<span class="cm-operator">*</span> {<span class="cm-operator">*</span>;}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">##</span> <span class="cm-variable">imobi广告SDK混淆</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keepattributes</span> <span class="cm-variable">SourceFile</span>,<span class="cm-variable">LineNumberTable</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">class</span> <span class="cm-def">com</span>.<span class="cm-variable">inmobi</span>.<span class="cm-operator">**</span> { <span class="cm-operator">*</span>; }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">dontwarn</span> <span class="cm-variable">com</span>.<span class="cm-variable">inmobi</span>.<span class="cm-operator">**</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">public</span> <span class="cm-keyword">class</span> <span class="cm-def">com</span>.<span class="cm-variable">google</span>.<span class="cm-variable">android</span>.<span class="cm-variable">gms</span>.<span class="cm-operator">**</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">dontwarn</span> <span class="cm-variable">com</span>.<span class="cm-variable">google</span>.<span class="cm-variable">android</span>.<span class="cm-variable">gms</span>.<span class="cm-operator">**</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">dontwarn</span> <span class="cm-variable">com</span>.<span class="cm-variable">squareup</span>.<span class="cm-variable">picasso</span>.<span class="cm-operator">**</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">class</span> <span class="cm-def">com</span>.<span class="cm-variable">google</span>.<span class="cm-variable">android</span>.<span class="cm-variable">gms</span>.<span class="cm-variable">ads</span>.<span class="cm-variable">identifier</span>.<span class="cm-variable">AdvertisingIdClient</span>{<span class="cm-keyword">public</span> <span class="cm-operator">*</span>;}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">class</span> <span class="cm-def">com</span>.<span class="cm-variable">google</span>.<span class="cm-variable">android</span>.<span class="cm-variable">gms</span>.<span class="cm-variable">ads</span>.<span class="cm-variable">identifier</span>.<span class="cm-variable">AdvertisingIdClient$Info</span>{<span class="cm-keyword">public</span> <span class="cm-operator">*</span>;}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">class</span> <span class="cm-def">com</span>.<span class="cm-variable">squareup</span>.<span class="cm-variable">picasso</span>.<span class="cm-operator">**</span> {<span class="cm-operator">*</span>;}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">dontwarn</span> <span class="cm-variable">com</span>.<span class="cm-variable">squareup</span>.<span class="cm-variable">picasso</span>.<span class="cm-operator">**</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">dontwarn</span> <span class="cm-variable">com</span>.<span class="cm-variable">squareup</span>.<span class="cm-variable">okhttp</span>.<span class="cm-operator">**</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">class</span> <span class="cm-def">com</span>.<span class="cm-variable">moat</span>.<span class="cm-operator">**</span> {<span class="cm-operator">*</span>;}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">dontwarn</span> <span class="cm-variable">com</span>.<span class="cm-variable">moat</span>.<span class="cm-operator">**</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">class</span> <span class="cm-def">com</span>.<span class="cm-variable">integralads</span>.<span class="cm-variable">avid</span>.<span class="cm-variable">library</span>.<span class="cm-operator">**</span> {<span class="cm-operator">*</span>;}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">##</span> <span class="cm-variable">mobvsita广告SDK混淆</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keepattributes</span> <span class="cm-variable">Signature</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keepattributes</span> <span class="cm-operator">*</span><span class="cm-variable">Annotation</span><span class="cm-operator">*</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">class</span> <span class="cm-def">com</span>.<span class="cm-variable">mintegral</span>.<span class="cm-operator">**</span> {<span class="cm-operator">*</span>; }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">interface</span> <span class="cm-def">com</span>.<span class="cm-variable">mintegral</span>.<span class="cm-operator">**</span> {<span class="cm-operator">*</span>; }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">dontwarn</span> <span class="cm-variable">com</span>.<span class="cm-variable">mintegral</span>.<span class="cm-operator">**</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">class</span> <span class="cm-def">com</span>.<span class="cm-variable">alphab</span>.<span class="cm-operator">**</span> {<span class="cm-operator">*</span>; }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span><span class="cm-variable">keep</span> <span class="cm-keyword">interface</span> <span class="cm-def">com</span>.<span class="cm-variable">alphab</span>.<span class="cm-operator">**</span> {<span class="cm-operator">*</span>; }</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 1606px;"></div><div class="CodeMirror-gutters" style="display: none; height: 1606px;"></div></div></div></pre><div style="page-break-after:always;"></div><h2><a name="9-常见问题和说明" class="md-header-anchor"></a><span>9. 常见问题和说明</span></h2><h3><a name="91-下载弹框样式修改" class="md-header-anchor"></a><span>9.1 下载弹框样式修改</span></h3><p><span>头条、Inmobi、Mobvsita和Admob的下载弹框默认样式，可通过重写这个style修改样式</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="java"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="java"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">&lt;</span><span class="cm-variable">style</span> <span class="cm-variable">name</span><span class="cm-operator">=</span><span class="cm-string">"Theme.Dialog.TTDownload"</span> <span class="cm-variable">parent</span><span class="cm-operator">=</span><span class="cm-string">"@android:style/Theme.DeviceDefault.Light.Dialog"</span><span class="cm-operator">&gt;</span> &nbsp; &nbsp; </span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-operator">&lt;</span><span class="cm-variable">item</span> <span class="cm-variable">name</span><span class="cm-operator">=</span><span class="cm-string">"android:windowMinWidthMajor"</span><span class="cm-operator">&gt;</span><span class="cm-number">65</span><span class="cm-operator">%&lt;/</span><span class="cm-variable">item</span><span class="cm-operator">&gt;</span> &nbsp; &nbsp; </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-operator">&lt;</span><span class="cm-variable">item</span> <span class="cm-variable">name</span><span class="cm-operator">=</span><span class="cm-string">"android:windowMinWidthMinor"</span><span class="cm-operator">&gt;</span><span class="cm-number">95</span><span class="cm-operator">%&lt;/</span><span class="cm-variable">item</span><span class="cm-operator">&gt;</span> </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">&lt;/</span><span class="cm-variable">style</span><span class="cm-operator">&gt;</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 110px;"></div><div class="CodeMirror-gutters" style="display: none; height: 110px;"></div></div></div></pre><p>&nbsp;</p><h3><a name="a-nameversiondata92-sdk版本号相关信息a" class="md-header-anchor"></a><a name="version_data"><span>9.2 SDK版本号相关信息</span></a></h3><p><span>2.3.8及之后版本SDK可以通过</span><font color=#ff0000><span>AD_VERSION</span></font><span>的log来查看集成的各个平台SDK的版本号</span></p><p>&nbsp;</p><h3><a name="a-namequestionanswer93-qa和错误信息对照表a" class="md-header-anchor"></a><a name="question_answer"><span>9.3 Q&amp;A和错误信息对照表</span></a></h3><blockquote><p><a href='http://101.37.118.54/dokuwiki/lib/exe/fetch.php?media=admobgensdk_android_question_answer.pdf'><span>Q&amp;A和错误信息对照表(点击此链接跳转)</span></a></p></blockquote><p>&nbsp;</p><h2><a name="10商务合作" class="md-header-anchor"></a><span>10.商务合作</span></h2><p><span>tomato@admobile.top</span></p><p>&nbsp;</p><p>&nbsp;</p></div>
+</body>
+</html>

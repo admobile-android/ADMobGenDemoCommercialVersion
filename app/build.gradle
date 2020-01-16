@@ -32,8 +32,9 @@ android {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
         debug {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
 
@@ -87,8 +88,8 @@ dependencies {
     implementation(name: 'gdt-release-2.3.3.1', ext: 'aar')
 
     // 头条广告平台所需要的
-    implementation(name: 'toutiao-release-2.4.3.1', ext: 'aar')
-    implementation(name: 'open_ad_sdk-2.5.3.2', ext: 'aar')
+    implementation(name: 'toutiao-release-2.4.3.2', ext: 'aar')
+    implementation(name: 'open_ad_sdk-2.7.5.2', ext: 'aar')
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.6'
 
     // 百度广告平台所需要的
