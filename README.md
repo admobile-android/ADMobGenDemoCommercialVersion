@@ -20,7 +20,7 @@
 
 * 2020-01-16
   
-  1. 头条平台SDK升级至2.7.5.2；
+  1. 头条平台SDK升级：toutiao-release升级至2.4.3.2，open_ad_sdk升级至2.7.5.2；
   2. 头条平台新版本SDK新增了混淆规则：-keep class com.pgl.sys.ces.* {*;}；
   
 * 2019-12-09
