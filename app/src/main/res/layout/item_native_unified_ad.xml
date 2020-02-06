@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.admob.admobgensdk.biz.widget.nativeunified.ADMobGenNativeUnifiedContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--ADMobGenNativeUnified广告容器必须为ADMobGenNativeUnifiedContainer且ADMobGenNativeUnifiedContainer有且只有一个子控件-->
+    <!--如果有导入广点通平台的SDK（gdt-release-x.x.x.x.aar），那么这个子控件还必须是com.qq.e.ads.nativ.widget.NativeAdContainer-->
+    <com.qq.e.ads.nativ.widget.NativeAdContainer
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                tools:text="广告标题" />
+
+            <RelativeLayout
+                android:id="@+id/rlImgMediaParent"
+                android:layout_width="match_parent"
+                android:layout_height="196dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/ivImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <!--Media容器建议宽高是16:9，视频绝大部分都是16:9的-->
+                <FrameLayout
+                    android:id="@+id/flMedia"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/ivLogo"
+                    android:layout_width="46dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:scaleType="centerCrop" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_stroke_999999"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="2dp"
+                    android:paddingRight="4dp"
+                    android:paddingBottom="2dp"
+                    android:text="广告"
+                    android:textColor="#999999"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tvSubTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#999999"
+                    android:textSize="12sp"
+                    tools:text="广告子标题" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.qq.e.ads.nativ.widget.NativeAdContainer>
+</cn.admob.admobgensdk.biz.widget.nativeunified.ADMobGenNativeUnifiedContainer>

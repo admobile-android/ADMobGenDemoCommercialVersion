@@ -9,11 +9,12 @@ import cn.ecookshipuji.banner.BannerActivity;
 import cn.ecookshipuji.drawvod.CustomDrawVodActivity;
 import cn.ecookshipuji.drawvod.DrawVodActivity;
 import cn.ecookshipuji.information.InformationActivity;
-import cn.ecookshipuji.interstitial.InterstitialActivity;
 import cn.ecookshipuji.js.JsAdActivity;
 import cn.ecookshipuji.nativead.NativeActivity;
+import cn.ecookshipuji.nativead.NativeUnifiedActivity;
 import cn.ecookshipuji.rewardvod.RewardVodActivity;
 import cn.ecookshipuji.splash.SplashActivity2;
+import cn.ecookshipuji.interstitial.InterstitialActivity;
 
 public class MainActivity extends Activity {
 
@@ -46,13 +47,18 @@ public class MainActivity extends Activity {
                 BannerActivity.jumpHere(MainActivity.this);
             }
         });
+        findViewById(R.id.tvNativeUnified).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NativeUnifiedActivity.jumpHere(MainActivity.this);
+            }
+        });
         findViewById(R.id.tvNative).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 NativeActivity.jumpHere(MainActivity.this);
             }
         });
-
         findViewById(R.id.tvDrawVod).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

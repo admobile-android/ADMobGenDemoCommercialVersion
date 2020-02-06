@@ -13,9 +13,6 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-    <!-- 最低版本号小于等于19建议添加GET_TASKS权限，因广点通或头条存在19及其以下设备没有GET_TASKS权限会有闪退情况，所以SDK内部在没有GET_TASKS权限且手机版本小于等于19情况下不会去加载这两个平台的广告 -->
-    <uses-permission android:name="android.permission.GET_TASKS" />
-
     <!-- 为了提高广告收益，建议设置的权限 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -66,6 +63,10 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".nativead.NativeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".nativead.NativeUnifiedActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait" />
         <activity
             android:name=".information.InformationActivity"

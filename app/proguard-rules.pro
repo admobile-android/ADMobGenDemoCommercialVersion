@@ -13,6 +13,9 @@
 -dontwarn org.apache.commons.**
 -keep class org.apache.**{*;}
 
+# OAID混淆
+-keep class com.bun.miitmdid.core.** {*;}
+
 # AdMob广告SDK混淆
 -keep class admsdk.library.**{*;}
 
@@ -39,17 +42,18 @@
 -keepattributes SourceFile,LineNumberTable
 -keep class com.inmobi.** { *; }
 -dontwarn com.inmobi.**
--keep public class com.google.android.gms.**
--dontwarn com.google.android.gms.**
 -dontwarn com.squareup.picasso.**
--keep class com.google.android.gms.ads.identifier.AdvertisingIdClient{public *;}
--keep class com.google.android.gms.ads.identifier.AdvertisingIdClient$Info{public *;}
 -keep class com.squareup.picasso.** {*;}
 -dontwarn com.squareup.picasso.**
 -dontwarn com.squareup.okhttp.**
--keep class com.moat.** {*;}
--dontwarn com.moat.**
 -keep class com.integralads.avid.library.** {*;}
+-dontwarn com.bun.**
+-keep class com.iab.** {*;}
+-dontwarn com.iab.**
+
+#okhttp
+-dontwarn okhttp3.**
+-keep class okhttp3.**{*;}
 
 ## mobvsita广告SDK混淆
 -keepattributes Signature
@@ -59,6 +63,7 @@
 -dontwarn com.mintegral.**
 -keep class com.alphab.** {*; }
 -keep interface com.alphab.** {*; }
+-keep class **.R$* { public static final int mintegral*; }
 
 ## 资源文件混淆配置
 -keep class **.R$* { *; }
@@ -68,6 +73,3 @@
 -keepclassmembers class **.R$* {
     public static <fields>;
 }
-
-# OAID混淆
--keep class com.bun.miitmdid.core.** {*;}

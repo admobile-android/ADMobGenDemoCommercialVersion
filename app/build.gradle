@@ -6,24 +6,22 @@ android {
 
     defaultConfig {
 
-
         applicationId "cn.ecookshipuji"
 
         minSdkVersion 16
 
         targetSdkVersion 29
 
-        versionCode 201912092
+        versionCode 202001182
 
-        versionName "2.4.3.12092"
+        versionName "2.4.5.01182"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         ndk {
             // 设置支持的SO库架构
-            abiFilters 'armeabi-v7a' //, 'x86', 'x86_64', 'armeabi', 'arm64-v8a'
+            abiFilters 'armeabi-v7a' // 'armeabi', 'arm64-v8a'
         }
-        multiDexEnabled true
     }
 
     buildTypes {
@@ -32,7 +30,6 @@ android {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-
         debug {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -80,27 +77,27 @@ dependencies {
     implementation 'com.tencent.bugly:nativecrashreport:3.7.1'
 
     // 必须的
-    implementation(name: 'admobgensdk-release-2.4.3.12092', ext: 'aar')
-    implementation(name: 'admob-release-2.4.3.1', ext: 'aar')
+    implementation(name: 'admobgensdk-release-2.4.5.01182', ext: 'aar')
+    implementation(name: 'admob-release-2.4.5.1', ext: 'aar')
     implementation(name: 'miit_mdid_1.0.10', ext: 'aar')
 
     // 广点通平台需要的
-    implementation(name: 'gdt-release-2.3.3.1', ext: 'aar')
+    implementation(name: 'gdt-release-2.3.3.3', ext: 'aar')
 
     // 头条广告平台所需要的
-    implementation(name: 'toutiao-release-2.4.3.2', ext: 'aar')
-    implementation(name: 'open_ad_sdk-2.7.5.2', ext: 'aar')
+    implementation(name: 'toutiao-release-2.4.5.2', ext: 'aar')
+    implementation(name: 'open_ad_sdk-2.7.5.4', ext: 'aar')
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.6'
 
     // 百度广告平台所需要的
     implementation(name: 'baidu-release-1.2.3.1', ext: 'aar')
 
     // inmobi平台所需要的（还需要V4和RecyclerView）
-    // picasso 依赖库添加失败会导致广告无法请求
-    implementation(name: 'inmobi-release-1.2.2.1', ext: 'aar')
+    // picasso 依赖库添加失败会导致Inmobi广告无法请求
+    implementation(name: 'inmobi-release-1.2.2.2', ext: 'aar')
     implementation 'com.squareup.picasso:picasso:2.5.2'
 
     // mobvsita平台所需要的
-    // 将Android Support v4包升级到26.0.0或以上。
-    implementation(name: 'mobvsita-release-1.2.2.1', ext: 'aar')
+    // 需要将Android Support v4包升级到26.0.0或以上。
+    implementation(name: 'mobvsita-release-1.2.2.2', ext: 'aar')
 }
