@@ -84,9 +84,6 @@
         <activity
             android:name=".drawvod.DrawVodActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".drawvod.CustomDrawVodActivity"
-            android:screenOrientation="portrait" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"

@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,7 +31,6 @@ import fr.castorflex.android.verticalviewpager.VerticalViewPager;
 public class DrawVodActivity extends Activity {
     private static final String TAG = "ADMobGen_Log";
     private VerticalViewPager verticalViewPager;
-    private ViewPager horViewPager;
     private ADMobGenDrawVod adMobGenDrawVod;
     private AlertDialog alertDialog;
     private List<IADMobGenDrawVod> adMobGenDrawVodList;
@@ -52,7 +50,7 @@ public class DrawVodActivity extends Activity {
 
     @Override
     protected void onDestroy() {
-        Log.e(TAG, "onDestroy::::::::::::::::: " );
+        Log.e(TAG, "onDestroy::::::::::::::::: ");
         clearData();
         if (adMobGenDrawVod != null) {
             adMobGenDrawVod.destroy();
@@ -63,7 +61,6 @@ public class DrawVodActivity extends Activity {
 
     private void initView() {
         verticalViewPager = findViewById(R.id.verticalViewPager);
-        horViewPager = findViewById(R.id.horViewPager);
     }
 
     private void initData() {
@@ -161,16 +158,7 @@ public class DrawVodActivity extends Activity {
                     container.removeView((View) object);
                 }
             };
-            // 加载横向滑动的ViewPager还是竖直方向的
-            if (MyApplication.horDrawVod) {
-                horViewPager.setVisibility(View.VISIBLE);
-                verticalViewPager.setVisibility(View.GONE);
-                horViewPager.setAdapter(pagerAdapter);
-            } else {
-                horViewPager.setVisibility(View.GONE);
-                verticalViewPager.setVisibility(View.VISIBLE);
-                verticalViewPager.setAdapter(pagerAdapter);
-            }
+            verticalViewPager.setAdapter(pagerAdapter);
         }
     }
 

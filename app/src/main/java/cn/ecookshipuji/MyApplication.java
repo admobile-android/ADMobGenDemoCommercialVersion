@@ -21,25 +21,25 @@ public class MyApplication extends Application {
      */
     public static int adIndex = 0;
     /**
-     * 是否横屏展示DrawVod广告
-     */
-    public static boolean horDrawVod = false;
-    /**
-     * 是否是自定义DrawVod广告类型
-     */
-    public static boolean customDrawVod = false;
-    /**
      * 是否是广点通Banner2.0
      */
     public static boolean gdtBanner2 = true;
+    /**
+     * 是否设置头条信息流广告参数
+     */
+    public static boolean isTTNativeExpressParam = true;
+
     private static final String APP_ID = "2482522";
 
+    /**
+     * TODO Inmobi平台暂时不兼容高版本的OAID库（msa_mdid_1.0.13.aar），已和Inmobi沟通，后续版本会升级兼容
+     */
     private static final String[] PLATFORMS = {
             ADMobGenAdPlaforms.PLAFORM_ADMOB
             , ADMobGenAdPlaforms.PLAFORM_GDT
             , ADMobGenAdPlaforms.PLAFORM_TOUTIAO
             , ADMobGenAdPlaforms.PLAFORM_BAIDU
-            , ADMobGenAdPlaforms.PLAFORM_INMOBI
+//            , ADMobGenAdPlaforms.PLAFORM_INMOBI
             , ADMobGenAdPlaforms.PLAFORM_MOBVSITA
     };
 
@@ -52,12 +52,12 @@ public class MyApplication extends Application {
                 .appId(APP_ID)
                 // PLATFORMS只需要选择所需的广告平台(其中PLAFORM_ADMOB是必须的)
                 .platforms(PLATFORMS)
-                // 如果APP在其他进程使用了WebView（没有可不设置）可通过这个方法来兼容，也可自行通过WebView.setDataDirectorySuffix()兼容
+                // 如果APP在其他进程使用了WebView（没有可不设置）可通过这个方法来兼容，也可自行通过WebView.setDataDirectorySuffix()设置
                 // .webViewOtherProcessName(suffix)
                 .build());
         Log.e("ADMobGen_Log", "init sdk need time : " + (System.currentTimeMillis() - millis) + "ms");
 
         // 添加bugly初始化（该初始化与广告SDK无关，广告SDK中不包含bugly相关内容，仅供Demo错误信息收集使用）
-        CrashReport.initCrashReport(getApplicationContext(), "6b2f5f5e4c", BuildConfig.DEBUG);
+        CrashReport.initCrashReport(getApplicationContext(), "6b2f5f5e4c", true);
     }
 }

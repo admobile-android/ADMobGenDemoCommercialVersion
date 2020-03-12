@@ -11,7 +11,7 @@
     <style name="splash" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@drawable/shape_splash</item>
     </style>
-    
+
     <style name="InformationStyleNum">
         <item name="android:layout_weight">1</item>
         <item name="android:layout_width">0dp</item>

@@ -101,7 +101,7 @@
                 android:background="#fff"
                 android:elevation="5dp"
                 android:gravity="center"
-                android:text="DrawVod广告（已过时）" />
+                android:text="DrawVod广告" />
 
             <TextView
                 android:layout_width="wrap_content"

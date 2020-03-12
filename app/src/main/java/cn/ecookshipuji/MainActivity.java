@@ -6,15 +6,14 @@ import android.view.View;
 
 import cn.admob.admobgensdk.ad.constant.InformationAdType;
 import cn.ecookshipuji.banner.BannerActivity;
-import cn.ecookshipuji.drawvod.CustomDrawVodActivity;
 import cn.ecookshipuji.drawvod.DrawVodActivity;
 import cn.ecookshipuji.information.InformationActivity;
+import cn.ecookshipuji.interstitial.InterstitialActivity;
 import cn.ecookshipuji.js.JsAdActivity;
 import cn.ecookshipuji.nativead.NativeActivity;
 import cn.ecookshipuji.nativead.NativeUnifiedActivity;
 import cn.ecookshipuji.rewardvod.RewardVodActivity;
 import cn.ecookshipuji.splash.SplashActivity2;
-import cn.ecookshipuji.interstitial.InterstitialActivity;
 
 public class MainActivity extends Activity {
 
@@ -62,11 +61,7 @@ public class MainActivity extends Activity {
         findViewById(R.id.tvDrawVod).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (MyApplication.customDrawVod) {
-                    CustomDrawVodActivity.jumpHere(MainActivity.this);
-                } else {
-                    DrawVodActivity.jumpHere(MainActivity.this);
-                }
+                DrawVodActivity.jumpHere(MainActivity.this);
             }
         });
         findViewById(R.id.tvJs).setOnClickListener(new View.OnClickListener() {

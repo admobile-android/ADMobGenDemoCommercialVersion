@@ -56,24 +56,24 @@ public class InformationActivity extends Activity implements OnRefreshLoadMoreLi
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-//        默认信息流样式为上图下文
-//        adMobGenInformation = new ADMobGenInformation(this);
-
         int informationAdType = getIntent().getIntExtra("type", InformationAdType.NORMAL);
 
         // 建议Activity设置configChanges
         // 第三个参数是广告位序号（默认为0，用于支持单样式多广告位，无需要可以填0或者使用其他构造方法）
         adMobGenInformation = new ADMobGenInformation(this, informationAdType, MyApplication.adIndex);
 
-        // TODO: 2019/12/1之后，头条信息流只能新建模板广告，我们将无法对头条的信息流视图进行二次封装，微调也将无法支持头条，只能在后台调整。
-        // 这之前创建的头条信息流广告位可以正常使用，微调逻辑可正常
-        // TTNativeExpressParam参数为头条模板广告视图期望的宽度(单位为dp，即如果视图宽度希望是200dp则传入200)，小于等于0将传入屏幕宽度
-        int ttWidth = (int) (ADMobGenSDK.instance().getScreenWidth(this) / getResources().getDisplayMetrics().density);
-        TTNativeExpressParam ttNativeExpressParam = new TTNativeExpressParam(ttWidth);
-        // 设置头条模板广告视图期望的高度，默认为0，0为自适应
-        ttNativeExpressParam.setHeight(0);
-        // 通过setTTNativeExpressParam方法设置为头条新版本的模板广告，在这之前(2019/12/01)创建的头条广告位或没有接入头条平台无需进行此切换
-        adMobGenInformation.setTTNativeExpressParam(ttNativeExpressParam);
+        if (MyApplication.isTTNativeExpressParam) {
+            // TODO: 2019/12/1之后，头条信息流只能新建模板广告，我们将无法对头条的信息流视图进行二次封装，微调也将无法支持头条，只能在头条的后台调整。
+            // TODO: 这之前创建的头条信息流广告位可以正常使用，无需设置头条模板参数TTNativeExpressParam，微调逻辑可正常
+            // TTNativeExpressParam参数为头条模板广告视图期望的宽度(单位为dp，即如果视图宽度希望是200dp则传入200)，小于等于0将传入屏幕宽度
+            TTNativeExpressParam ttNativeExpressParam = new TTNativeExpressParam(ADMobGenSDK.instance().getScreenWidthDp(this));
+            // 设置头条模板广告视图期望的高度(单位为dp，即如果视图高度希望是200dp则传入200)，默认为0，0为自适应
+            ttNativeExpressParam.setHeight(0);
+            // 目前测试发现在5.1及以下版本的手机中头条的模板广告有可能存在崩溃现象，设置这个为true将不再这些版本中加载头条信息流模板广告
+            ttNativeExpressParam.setWithoutLowVersion(true);
+            // 通过setTTNativeExpressParam方法设置为头条新版本的模板广告，在这之前(2019/12/01)创建的头条广告位或没有接入头条平台无需进行此切换
+            adMobGenInformation.setTTNativeExpressParam(ttNativeExpressParam);
+        }
 
         // 设置广告曝光校验最小间隔时间(0~200)，默认为200ms，在RecyclerView或ListView这种列表中不建议设置更小值，在一些特定场景（如Dialog或者固定位置可根据要求设置更小值）
         // adMobGenInformation.setExposureDelay(200);

@@ -4,13 +4,13 @@
 
 | SDK名称             | 最新版本号  | 第三方SDK版本号 |
 | ------------------- | ----------- | ------------ |
-| admobgensdk-release | 2.4.5.01182 | -- |
-| admob-release       | 2.4.5.1 | --     |
-| gdt-release         | 2.3.3.3   | 4.150.1020 |
-| baidu-release       | 1.2.3.1     | 5.3.8        |
-| toutiao-release     | 2.4.5.2 | 2.7.5.4    |
-| inmobi-release      | 1.2.2.2    | 7.4.1   |
-| mobvsita-release    | 1.2.2.2    | 10.1.19 |
+| admobgensdk-release | 2.4.6.03022 | -- |
+| admob-release       | 2.4.6.4 | --     |
+| gdt-release         | 2.3.3.4  | 4.150.1020 |
+| baidu-release       | 1.2.3.2    | 5.3.8        |
+| toutiao-release     | 2.4.6.5 | 2.8.0.3 |
+| inmobi-release      | 1.2.2.3   | 7.4.1   |
+| mobvsita-release    | 1.2.2.3   | 10.1.9 |
 
 <font color=#ff0000>SDK接入文档请查看目录中 ADMobGenSdkDocument.pdf </font>
 
@@ -18,6 +18,16 @@
 
 #### 2.修订日志
 
+* 2020-03-10
+  
+  1. ADMobGenSdk升级：DrawVod重新支持、新增远程依赖支持、已知问题优化、广点通信息流广告关闭按钮不再接管；
+  2. 艾狄墨搏平台SDK升级：已知问题优化；
+  3. 广点通平台SDK升级：gdt-release升级至2.3.3.4；
+  4. 头条平台SDK升级：toutiao-release升级至2.4.6.5，头条SDK升级为2.8.0.3；
+  5. Inmobi平台SDK升级：inmobi-release升级至1.2.2.3；
+  6. Mobvsita平台SDK升级：mobvsita-release升级至1.2.2.3；
+  7. MSA的OAID支持库升级为1.0.13；
+  
 * 2020-02-06
   
   1. ADMobGenSdk升级：已知问题优化；
@@ -25,7 +35,7 @@
   3. 广点通平台SDK升级：gdt-release升级至2.3.3.2，广点通SDK升级为4.150.1020；
   4. 头条平台SDK升级：toutiao-release升级至2.4.5.2，头条SDK升级为2.7.5.4；
   5. Inmobi平台SDK升级：inmobi-release升级至1.2.2.2，Inmobi SDK升级为7.4.1；
-  6. Mobvsita平台SDK升级：mobvsita-release升级至1.2.2.2，Mobvsita SDK升级为10.1.19；
+  6. Mobvsita平台SDK升级：mobvsita-release升级至1.2.2.2，Mobvsita SDK升级为10.1.9；
   7. Inmobi和Mobvsita混淆配置有所修改；
   
 * 2020-01-16

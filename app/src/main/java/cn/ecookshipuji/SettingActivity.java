@@ -18,9 +18,8 @@ import android.widget.Toast;
  */
 public class SettingActivity extends Activity {
     private EditText etInfoIndex;
-    private CheckBox cbDrawVod;
-    private CheckBox cbCustomDrawVod;
     private CheckBox cbBannerGdt2;
+    private CheckBox cbTTInfor;
     private Button btnConfirm;
 
     public static void jumpHere(Context context) {
@@ -39,9 +38,8 @@ public class SettingActivity extends Activity {
 
     private void initView() {
         etInfoIndex = findViewById(R.id.etInfoIndex);
-        cbDrawVod = findViewById(R.id.cbDrawVod);
-        cbCustomDrawVod = findViewById(R.id.cbCustomDrawVod);
         cbBannerGdt2 = findViewById(R.id.cbBannerGdt2);
+        cbTTInfor = findViewById(R.id.cbTTInfor);
         btnConfirm = findViewById(R.id.btnConfirm);
     }
 
@@ -58,9 +56,8 @@ public class SettingActivity extends Activity {
         if (MyApplication.adIndex > 0) {
             etInfoIndex.setText(MyApplication.adIndex + "");
         }
-        cbDrawVod.setChecked(MyApplication.horDrawVod);
-        cbCustomDrawVod.setChecked(MyApplication.customDrawVod);
         cbBannerGdt2.setChecked(MyApplication.gdtBanner2);
+        cbTTInfor.setChecked(MyApplication.isTTNativeExpressParam);
     }
 
     private void changedSetting() {
@@ -80,9 +77,8 @@ public class SettingActivity extends Activity {
             return;
         }
         MyApplication.adIndex = index;
-        MyApplication.horDrawVod = cbDrawVod.isChecked();
-        MyApplication.customDrawVod = cbCustomDrawVod.isChecked();
         MyApplication.gdtBanner2 = cbBannerGdt2.isChecked();
+        MyApplication.isTTNativeExpressParam = cbTTInfor.isChecked();
         Toast.makeText(this, "修改成功", Toast.LENGTH_SHORT).show();
     }
 }

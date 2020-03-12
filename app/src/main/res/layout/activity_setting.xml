@@ -28,66 +28,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:inputType="number"
-                android:text="开启广告关闭按钮"
-                android:textSize="16sp" />
-
-            <CheckBox
-                android:id="@+id/cbAdClose"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center_vertical">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number"
-                android:text="横向DrawVod广告"
-                android:textSize="16sp" />
-
-            <CheckBox
-                android:id="@+id/cbDrawVod"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center_vertical">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number"
-                android:text="自定义DrawVod广告"
-                android:textSize="16sp" />
-
-            <CheckBox
-                android:id="@+id/cbCustomDrawVod"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center_vertical">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number"
                 android:text="广点通Banner2.0"
                 android:textSize="16sp" />
 
@@ -97,6 +37,25 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:text="头条信息流广告模板设置"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/cbTTInfor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
         <Button
             android:id="@+id/btnConfirm"
             android:layout_width="match_parent"
