@@ -88,7 +88,7 @@ public class RewardVodActivity extends Activity {
 
             @Override
             public void onVideoCached(IADMobGenRewardVod iadMobGenRewardVod) {
-                // 建议在此回调后开始展示激励视频（可以无卡顿无loading播放，Mobvsita的激励视频需要在此回调后播放）
+                // 建议在此回调后开始展示激励视频（Mobvsita的激励视频需要在此回调后播放）
                 Log.e(TAG, "激励视频广告缓存成功::::::: ");
             }
 

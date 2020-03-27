@@ -28,26 +28,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:inputType="number"
-                android:text="广点通Banner2.0"
-                android:textSize="16sp" />
-
-            <CheckBox
-                android:id="@+id/cbBannerGdt2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center_vertical">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number"
                 android:text="头条信息流广告模板设置"
                 android:textSize="16sp" />
 

@@ -41,11 +41,9 @@ public class BannerActivity extends Activity {
         // 头条Banner已经升级为模板广告，如果需要开启自动刷新，需要后台开启并设置刷新时间
         adMobGenBannerView.setRefreshTime(30);
 
-        // 切换为广点通Banner2.0（2019.04.11后广点通不能新建Banner广告位，只能新建Banner2.0，如果申请的是Banner2.0的广告位需要设置这个，之前申请的Banner无需设置）
-        adMobGenBannerView.setGdt2(MyApplication.gdtBanner2);
-
         // 测试发现安卓版本在8.0及以上部分小米手机，当APP长时间处于后台时，Bugly有几率收集到WebView相关的Native Crash信息（暂时无法手动复现），目前测试发现有可能是头条的Banner广告导致的，后续将持续跟进此问题
         // setRemoveTouTiaoBannerInXiaoMiUp8设置为true（默认为false）将不在安卓8.0及以上的小米手机中获取头条的Banner广告
+        // 设置了这个属性还将不再5.1和之前版本手机请求头条Banner，测试发现在这部分低版本手机上头条Banner存在崩溃问题
         adMobGenBannerView.setRemoveTouTiaoBannerInXiaoMiUp8(true);
 
         // 设置广告监听

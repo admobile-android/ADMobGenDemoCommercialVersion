@@ -75,6 +75,10 @@
         <activity
             android:name=".rewardvod.RewardVodActivity"
             android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".fullscreenvod.FullScreenVodActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".js.JsAdActivity"
             android:screenOrientation="portrait" />

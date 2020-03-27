@@ -4,19 +4,28 @@
 
 | SDK名称             | 最新版本号  | 第三方SDK版本号 |
 | ------------------- | ----------- | ------------ |
-| admobgensdk-release | 2.4.6.03022 | -- |
-| admob-release       | 2.4.6.4 | --     |
-| gdt-release         | 2.3.3.4  | 4.150.1020 |
-| baidu-release       | 1.2.3.2    | 5.3.8        |
-| toutiao-release     | 2.4.6.5 | 2.8.0.3 |
-| inmobi-release      | 1.2.2.3   | 7.4.1   |
-| mobvsita-release    | 1.2.2.3   | 10.1.9 |
+| admobgensdk-release | 2.4.7.03252 | -- |
+| admob-release       | 2.4.7.1 | --     |
+| gdt-release         | 2.3.4.1  | 4.176.1046 |
+| baidu-release       | 1.2.3.2   | 5.3.8        |
+| toutiao-release     | 2.4.7.1   | 2.8.0.3 |
+| inmobi-release      | 1.2.3.1   | 7.4.2   |
+| mobvsita-release    | 1.2.3.1   | 10.2.3  |
 
 <font color=#ff0000>SDK接入文档请查看目录中 ADMobGenSdkDocument.pdf </font>
 
 
 
 #### 2.修订日志
+
+* 2020-03-27
+  1. ADMobGenSdk升级：新增支持全屏视频广告类型，必须接入OAID，
+  2. 艾狄墨搏平台SDK升级：已知问题优化；
+  3. 广点通平台SDK升级：gdt-release升级至2.3.4.1，广点通SDK升级为4.176.1046；
+  4. 头条平台SDK升级：toutiao-release升级至2.4.7.1，头条SDK升级为2.8.0.3；
+  5. Inmobi平台SDK升级：inmobi-release升级至1.2.3.1；
+  6. Mobvsita平台SDK升级：mobvsita-release升级至1.2.3.1；
+  7、gdt-release 不再支持低于4.176.1046版本的广点通SDK；
 
 * 2020-03-10
   

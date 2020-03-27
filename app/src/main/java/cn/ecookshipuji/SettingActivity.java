@@ -18,7 +18,6 @@ import android.widget.Toast;
  */
 public class SettingActivity extends Activity {
     private EditText etInfoIndex;
-    private CheckBox cbBannerGdt2;
     private CheckBox cbTTInfor;
     private Button btnConfirm;
 
@@ -38,7 +37,6 @@ public class SettingActivity extends Activity {
 
     private void initView() {
         etInfoIndex = findViewById(R.id.etInfoIndex);
-        cbBannerGdt2 = findViewById(R.id.cbBannerGdt2);
         cbTTInfor = findViewById(R.id.cbTTInfor);
         btnConfirm = findViewById(R.id.btnConfirm);
     }
@@ -56,7 +54,6 @@ public class SettingActivity extends Activity {
         if (MyApplication.adIndex > 0) {
             etInfoIndex.setText(MyApplication.adIndex + "");
         }
-        cbBannerGdt2.setChecked(MyApplication.gdtBanner2);
         cbTTInfor.setChecked(MyApplication.isTTNativeExpressParam);
     }
 
@@ -77,7 +74,6 @@ public class SettingActivity extends Activity {
             return;
         }
         MyApplication.adIndex = index;
-        MyApplication.gdtBanner2 = cbBannerGdt2.isChecked();
         MyApplication.isTTNativeExpressParam = cbTTInfor.isChecked();
         Toast.makeText(this, "修改成功", Toast.LENGTH_SHORT).show();
     }

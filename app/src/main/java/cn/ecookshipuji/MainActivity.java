@@ -7,13 +7,14 @@ import android.view.View;
 import cn.admob.admobgensdk.ad.constant.InformationAdType;
 import cn.ecookshipuji.banner.BannerActivity;
 import cn.ecookshipuji.drawvod.DrawVodActivity;
+import cn.ecookshipuji.fullscreenvod.FullScreenVodActivity;
 import cn.ecookshipuji.information.InformationActivity;
-import cn.ecookshipuji.interstitial.InterstitialActivity;
 import cn.ecookshipuji.js.JsAdActivity;
 import cn.ecookshipuji.nativead.NativeActivity;
 import cn.ecookshipuji.nativead.NativeUnifiedActivity;
 import cn.ecookshipuji.rewardvod.RewardVodActivity;
 import cn.ecookshipuji.splash.SplashActivity2;
+import cn.ecookshipuji.interstitial.InterstitialActivity;
 
 public class MainActivity extends Activity {
 
@@ -32,6 +33,12 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 RewardVodActivity.jumpHere(MainActivity.this);
+            }
+        });
+        findViewById(R.id.tvFullScreenVod).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FullScreenVodActivity.jumpHere(MainActivity.this);
             }
         });
         findViewById(R.id.tvInterstitial).setOnClickListener(new View.OnClickListener() {
@@ -58,6 +65,7 @@ public class MainActivity extends Activity {
                 NativeActivity.jumpHere(MainActivity.this);
             }
         });
+
         findViewById(R.id.tvDrawVod).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

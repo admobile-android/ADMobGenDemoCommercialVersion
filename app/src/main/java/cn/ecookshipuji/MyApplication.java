@@ -21,25 +21,19 @@ public class MyApplication extends Application {
      */
     public static int adIndex = 0;
     /**
-     * 是否是广点通Banner2.0
-     */
-    public static boolean gdtBanner2 = true;
-    /**
      * 是否设置头条信息流广告参数
      */
     public static boolean isTTNativeExpressParam = true;
 
     private static final String APP_ID = "2482522";
 
-    /**
-     * TODO Inmobi平台暂时不兼容高版本的OAID库（msa_mdid_1.0.13.aar），已和Inmobi沟通，后续版本会升级兼容
-     */
+
     private static final String[] PLATFORMS = {
             ADMobGenAdPlaforms.PLAFORM_ADMOB
             , ADMobGenAdPlaforms.PLAFORM_GDT
             , ADMobGenAdPlaforms.PLAFORM_TOUTIAO
             , ADMobGenAdPlaforms.PLAFORM_BAIDU
-//            , ADMobGenAdPlaforms.PLAFORM_INMOBI
+            , ADMobGenAdPlaforms.PLAFORM_INMOBI
             , ADMobGenAdPlaforms.PLAFORM_MOBVSITA
     };
 
