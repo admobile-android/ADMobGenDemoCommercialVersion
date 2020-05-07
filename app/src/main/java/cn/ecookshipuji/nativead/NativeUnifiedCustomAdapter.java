@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -115,7 +116,10 @@ public class NativeUnifiedCustomAdapter extends RecyclerView.Adapter<NativeUnifi
                 });
             }
 
-            nativeUnifiedAd.registerViewForInteraction((ADMobGenNativeUnifiedContainer) customViewHolder.itemView);
+            //  第二个参数为可变参数，需要传入自渲染2.0广告可点击区域的View，
+            //  注意 如果有接入广点通平台，则可变参数 只能为 com.qq.e.ads.nativ.widget.NativeAdContainer 的子View
+            nativeUnifiedAd.registerViewForInteraction((ADMobGenNativeUnifiedContainer) customViewHolder.itemView
+                    ,customViewHolder.adContainer);
         } else {
             customViewHolder.title.setText((mData.get(position) + ""));
         }
@@ -129,6 +133,7 @@ public class NativeUnifiedCustomAdapter extends RecyclerView.Adapter<NativeUnifi
     }
 
     class CustomViewHolder extends RecyclerView.ViewHolder {
+        public LinearLayout adContainer;
         public TextView title;
 
         public TextView tvTitle;
@@ -139,6 +144,7 @@ public class NativeUnifiedCustomAdapter extends RecyclerView.Adapter<NativeUnifi
 
         public CustomViewHolder(View view) {
             super(view);
+            adContainer = view.findViewById(R.id.adContainer);
             title = view.findViewById(R.id.title);
             tvTitle = view.findViewById(R.id.tvTitle);
             tvSubTitle = view.findViewById(R.id.tvSubTitle);

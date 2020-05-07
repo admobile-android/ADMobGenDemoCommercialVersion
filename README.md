@@ -4,19 +4,28 @@
 
 | SDK名称             | 最新版本号  | 第三方SDK版本号 |
 | ------------------- | ----------- | ------------ |
-| admobgensdk-release | 2.4.7.03252 | -- |
-| admob-release       | 2.4.7.1 | --     |
-| gdt-release         | 2.3.4.1  | 4.176.1046 |
-| baidu-release       | 1.2.3.2   | 5.3.8        |
-| toutiao-release     | 2.4.7.1   | 2.8.0.3 |
-| inmobi-release      | 1.2.3.1   | 7.4.2   |
-| mobvsita-release    | 1.2.3.1   | 10.2.3  |
+| admobgensdk-release | 2.4.8.05072 | -- |
+| admob-release       | 2.4.8.1 | --     |
+| gdt-release         | 2.3.5.2   | 4.191.1061 |
+| baidu-release       | 1.2.4.2   | 5.8.3   |
+| toutiao-release     | 2.4.7.3   | 2.8.0.3 |
+| inmobi-release      | 1.2.3.2   | 7.4.3   |
+| mobvsita-release    | 1.2.4.2   | 10.2.4  |
 
 <font color=#ff0000>SDK接入文档请查看目录中 ADMobGenSdkDocument.pdf </font>
 
 
 
 #### 2.修订日志
+* 2020-05-07
+  1. ADMobGenSdk升级：优化自渲染2.0广告视图绑定逻辑；
+  2. 艾狄墨搏平台SDK升级：已知问题优化；
+  3. 广点通平台SDK升级：gdt-release升级至2.3.5.2，广点通SDK升级为4.191.1061；
+  4. 头条平台SDK升级：toutiao-release升级至2.4.7.3；
+  5. 百度平台SDK升级：baidu-release升级至1.2.4.2；
+  5. Inmobi平台SDK升级：inmobi-release升级至1.2.3.2，Inmobi SDK升级为7.4.3；
+  6. Mobvsita平台SDK升级：mobvsita-release升级至1.2.4.2，Mobvsita SDK升级为10.2.4；
+
 * 2020-04-23
   1. 修复广点通信息流关闭回调不执行问题；
 
