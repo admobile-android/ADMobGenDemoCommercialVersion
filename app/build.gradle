@@ -87,10 +87,10 @@ dependencies {
 
 
     // 广点通平台需要的
-//    implementation(name: 'gdt-release-2.3.5.2', ext: 'aar')
-    implementation 'com.admobile.ad:adapter_gdt:2.3.5.2'
+//    implementation(name: 'gdt-release-2.3.5.3', ext: 'aar')
+    implementation 'com.admobile.ad:adapter_gdt:2.3.5.3'
     // 如自行集成广点通SDK，仅支持4.170.1040以上版本的广点通SDK
-//    implementation 'com.admobile.ad:adapter_gdt_without:2.3.5.2'
+//    implementation 'com.admobile.ad:adapter_gdt_without:2.3.5.3'
 
 
     // 头条广告平台所需要的
