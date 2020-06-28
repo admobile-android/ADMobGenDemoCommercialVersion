@@ -1,6 +1,7 @@
 package cn.ecookshipuji;
 
 import android.app.Application;
+import android.support.multidex.MultiDex;
 import android.util.Log;
 
 import com.tencent.bugly.crashreport.CrashReport;
@@ -40,6 +41,7 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        MultiDex.install(this);
         long millis = System.currentTimeMillis();
         ADMobGenSDK.instance().initSdk(this, new ADMobGenSdkConfig.Builder()
                 // 修改为自己的appId
