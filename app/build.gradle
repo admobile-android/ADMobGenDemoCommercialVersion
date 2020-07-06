@@ -81,8 +81,8 @@ dependencies {
     // admobgensdk和admobile是必须的
     implementation 'com.admobile.ad:admobgensdk:2.4.9.06281'
     implementation 'com.admobile.ad:adapter_admobile:2.4.9.2'
-//    implementation(name: 'admobgensdk-release-2.4.8.05072', ext: 'aar')
-//    implementation(name: 'admob-release-2.4.8.1', ext: 'aar')
+//    implementation(name: 'admobgensdk-release-2.4.9.06281', ext: 'aar')
+//    implementation(name: 'admob-release-2.4.9.2', ext: 'aar')
 
     // 添加安全移动联盟OAID支持库（具体适配可参考文档）
 //    implementation(name: 'msa_mdid_1.0.13', ext: 'aar')
