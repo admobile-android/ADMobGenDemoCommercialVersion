@@ -4,19 +4,25 @@
 
 | SDK名称             | 最新版本号  | 第三方SDK版本号 |
 | ------------------- | ----------- | ------------ |
-| admobgensdk-release | 2.4.9.06281 | -- |
-| admob-release       | 2.4.9.2 | --     |
-| gdt-release         | 2.3.6.1   | 4.211.1081 |
-| toutiao-release     | 2.4.8.1   | 3.0.0.4 |
-| baidu-release       | 1.2.5.1   | 5.85   |
-| inmobi-release      | 1.2.4.1   | 7.4.4   |
-| mobvsita-release    | 1.2.4.2   | 10.2.4  |
+| admobgensdk-release | 2.4.11.09081 | -- |
+| admob-release       | 2.4.11.1 | --     |
+| gdt-release         | 2.3.8.1   | 4.232.1102 |
+| toutiao-release     | 2.4.11.1   | 3.2.5.1 |
+| baidu-release       | 1.2.6.2   | 5.87   |
+| inmobi-release      | 1.2.4.2   | 7.4.5   |
+| mobvsita-release    | 1.2.4.3   | 10.3.0  |
 
 <font color=#ff0000>SDK接入文档请查看目录中 ADMobGenSdkDocument.pdf </font>
 
-
-
 #### 2.修订日志
+* 2020-09-08
+  1. 艾狄墨搏平台SDK升级：已知问题优化；
+  2. 广点通平台SDK升级：gdt-release升级至2.3.8.1，广点通SDK升级为4.232.1102；
+  3. 头条平台SDK升级：toutiao-release升级至2.4.11.1，头条SDK升级为3.2.5.1；
+  4. 百度平台SDK升级：baidu-release升级至1.2.6.2，百度SDK升级为5.87；
+  5. Inmobi平台SDK升级：inmobi-release升级至1.2.4.2，Inmobi SDK升级为7.4.5；
+  6. mobvsita平台SDK升级：mobvsita-release升级至1.2.4.3，mobvsita SDK升级为10.3.0；
+
 * 2020-06-28
   1. 艾狄墨搏平台SDK升级：已知问题优化；
   2. 广点通平台SDK升级：gdt-release升级至2.3.6.1，广点通SDK升级为4.211.1081；

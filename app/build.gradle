@@ -12,9 +12,9 @@ android {
 
         targetSdkVersion 29
 
-        versionCode 202006281
+        versionCode 202009221
 
-        versionName "2.4.9.06281"
+        versionName "2.4.11.09221"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -79,44 +79,44 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.3'
 
     // admobgensdk和admobile是必须的
-    implementation 'com.admobile.ad:admobgensdk:2.4.9.06281'
-    implementation 'com.admobile.ad:adapter_admobile:2.4.9.2'
-//    implementation(name: 'admobgensdk-release-2.4.9.06281', ext: 'aar')
-//    implementation(name: 'admob-release-2.4.9.2', ext: 'aar')
+    implementation 'com.admobile.ad:admobgensdk:2.4.11.09081'
+    implementation 'com.admobile.ad:adapter_admobile:2.4.11.1'
+//    implementation(name: 'admobgensdk-release-2.4.11.09081', ext: 'aar')
+//    implementation(name: 'admob-release-2.4.11.1', ext: 'aar')
 
     // 添加安全移动联盟OAID支持库（具体适配可参考文档）
 //    implementation(name: 'msa_mdid_1.0.13', ext: 'aar')
     implementation 'com.admobile:oaid:1.0.13'
 
     // 广点通平台需要的
-    implementation 'com.admobile.ad:adapter_gdt:2.3.6.1'
-//    implementation(name: 'gdt-release-2.3.6.1', ext: 'aar')
+    implementation 'com.admobile.ad:adapter_gdt:2.3.8.1'
+//    implementation(name: 'gdt-release-2.3.8.1', ext: 'aar')
     // 如自行集成广点通SDK，仅支持4.170.1040以上版本的广点通SDK
-//    implementation 'com.admobile.ad:adapter_gdt_without:2.3.6.1'
+//    implementation 'com.admobile.ad:adapter_gdt_without:2.3.8.1'
 
     // 头条广告平台所需要的
-    implementation 'com.admobile.ad:adapter_toutiao:2.4.8.1'
-//    implementation(name: 'toutiao-release-2.4.8.1', ext: 'aar')
+    implementation 'com.admobile.ad:adapter_toutiao:2.4.11.1'
+//    implementation(name: 'toutiao-release-2.4.11.1', ext: 'aar')
 //    implementation(name: 'open_ad_sdk-3.0.0.4', ext: 'aar')
-//    implementation 'com.admobile.ad:adapter_toutiao_without:2.4.8.1'
+//    implementation 'com.admobile.ad:adapter_toutiao_without:2.4.11.1'
 
 
     // 百度广告平台所需要的
-    implementation 'com.admobile.ad:adapter_baidu:1.2.5.1'
-//    implementation(name: 'baidu-release-1.2.5.1', ext: 'aar')
-//    implementation 'com.admobile.ad:adapter_baidu_without:1.2.5.1'
+    implementation 'com.admobile.ad:adapter_baidu:1.2.6.2'
+//    implementation(name: 'baidu-release-1.2.6.2', ext: 'aar')
+//    implementation 'com.admobile.ad:adapter_baidu_without:1.2.6.2'
 
 
     // inmobi平台所需要的（还需要V4和RecyclerView）
     // picasso 依赖库添加失败会导致Inmobi广告无法请求
-    implementation 'com.admobile.ad:adapter_inmobi:1.2.4.1'
-//    implementation(name: 'inmobi-release-1.2.4.1', ext: 'aar')
+    implementation 'com.admobile.ad:adapter_inmobi:1.2.4.2'
+//    implementation(name: 'inmobi-release-1.2.4.2', ext: 'aar')
     implementation 'com.squareup.picasso:picasso:2.5.2'
 
     // mobvsita平台所需要的
     // 需要将Android Support v4包升级到26.0.0或以上。
-    implementation 'com.admobile.ad:adapter_mobvsita:1.2.4.2'
-//    implementation(name: 'mobvsita-release-1.2.4.2', ext: 'aar')
+    implementation 'com.admobile.ad:adapter_mobvsita:1.2.4.3'
+//    implementation(name: 'mobvsita-release-1.2.4.3', ext: 'aar')
 
 
 }
