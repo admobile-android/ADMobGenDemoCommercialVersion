@@ -9,7 +9,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 29
         versionCode 202009221
-        versionName "2.4.12.02011"
+        versionName "2.4.12.01251"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         ndk {
             // 设置支持的SO库架构
