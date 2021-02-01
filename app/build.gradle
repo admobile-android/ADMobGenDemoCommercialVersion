@@ -5,29 +5,20 @@ android {
     compileSdkVersion 29
 
     defaultConfig {
-
         applicationId "cn.ecookshipuji"
-
         minSdkVersion 16
-
         targetSdkVersion 29
-
         versionCode 202009221
-
-        versionName "2.4.11.09221"
-
+        versionName "2.4.12.02011"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
         ndk {
             // 设置支持的SO库架构
             abiFilters 'armeabi-v7a' // 'armeabi', 'arm64-v8a'
         }
-
         multiDexEnabled true
     }
 
     buildTypes {
-
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -36,7 +27,6 @@ android {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-
     }
 
     signingConfigs {
@@ -49,7 +39,6 @@ android {
     }
 
     repositories {
-
         flatDir {
             dirs 'libs'
         }
@@ -79,44 +68,33 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.3'
 
     // admobgensdk和admobile是必须的
-    implementation 'com.admobile.ad:admobgensdk:2.4.11.09081'
-    implementation 'com.admobile.ad:adapter_admobile:2.4.11.1'
-//    implementation(name: 'admobgensdk-release-2.4.11.09081', ext: 'aar')
-//    implementation(name: 'admob-release-2.4.11.1', ext: 'aar')
+    implementation 'com.admobile.ad:admobgensdk:2.4.12.01251'
+    // common库请保持和Demo中版本一致
+    implementation 'com.admobile:common:1.2.3'
+    // TODO OAID库是必须导入的，请保持和Demo中版本一致（如果当前Suyi是3.0.9及以上版本，
+    // TODO 必须保证oaid版本为oaid_sdk_1.0.25，oaid_sdk_1.0.25为msa_mdid_1.0.13、oaid_sdk_1.0.23的升级版，请删除原有的msa_mdid）
+    implementation(name: 'oaid_sdk_1.0.25', ext: 'aar')
 
-    // 添加安全移动联盟OAID支持库（具体适配可参考文档）
-//    implementation(name: 'msa_mdid_1.0.13', ext: 'aar')
-    implementation 'com.admobile:oaid:1.0.13'
+    // 艾狄墨搏必须的
+    implementation 'com.admobile.ad:adapter_admobile:2.4.13.1'
 
     // 广点通平台需要的
-    implementation 'com.admobile.ad:adapter_gdt:2.3.8.1'
-//    implementation(name: 'gdt-release-2.3.8.1', ext: 'aar')
-    // 如自行集成广点通SDK，仅支持4.170.1040以上版本的广点通SDK
-//    implementation 'com.admobile.ad:adapter_gdt_without:2.3.8.1'
+    implementation 'com.admobile.ad:adapter_gdt:2.3.9.1'
 
     // 头条广告平台所需要的
-    implementation 'com.admobile.ad:adapter_toutiao:2.4.11.1'
-//    implementation(name: 'toutiao-release-2.4.11.1', ext: 'aar')
-//    implementation(name: 'open_ad_sdk-3.0.0.4', ext: 'aar')
-//    implementation 'com.admobile.ad:adapter_toutiao_without:2.4.11.1'
-
+    implementation 'com.admobile.ad:adapter_toutiao:2.4.12.1'
 
     // 百度广告平台所需要的
     implementation 'com.admobile.ad:adapter_baidu:1.2.6.2'
-//    implementation(name: 'baidu-release-1.2.6.2', ext: 'aar')
-//    implementation 'com.admobile.ad:adapter_baidu_without:1.2.6.2'
-
 
     // inmobi平台所需要的（还需要V4和RecyclerView）
     // picasso 依赖库添加失败会导致Inmobi广告无法请求
     implementation 'com.admobile.ad:adapter_inmobi:1.2.4.2'
-//    implementation(name: 'inmobi-release-1.2.4.2', ext: 'aar')
     implementation 'com.squareup.picasso:picasso:2.5.2'
 
     // mobvsita平台所需要的
     // 需要将Android Support v4包升级到26.0.0或以上。
     implementation 'com.admobile.ad:adapter_mobvsita:1.2.4.3'
-//    implementation(name: 'mobvsita-release-1.2.4.3', ext: 'aar')
 
 
 }

@@ -4,10 +4,10 @@
 
 | SDK名称             | 最新版本号  | 第三方SDK版本号 |
 | ------------------- | ----------- | ------------ |
-| admobgensdk-release | 2.4.11.09081 | -- |
-| admob-release       | 2.4.11.1 | --     |
-| gdt-release         | 2.3.8.1   | 4.232.1102 |
-| toutiao-release     | 2.4.11.1   | 3.2.5.1 |
+| admobgensdk-release | 2.4.12.01251 | -- |
+| admob-release       | 2.4.13.1 | --     |
+| gdt-release         | 2.3.9.1   | 4.310.1180 |
+| toutiao-release     | 2.4.12.1   | 3.3.0.9 |
 | baidu-release       | 1.2.6.2   | 5.87   |
 | inmobi-release      | 1.2.4.2   | 7.4.5   |
 | mobvsita-release    | 1.2.4.3   | 10.3.0  |
@@ -15,6 +15,11 @@
 <font color=#ff0000>SDK接入文档请查看目录中 ADMobGenSdkDocument.pdf </font>
 
 #### 2.修订日志
+* 2021-01-25
+  1. 艾狄墨搏平台SDK升级：已知问题优化；
+  2. 广点通平台SDK升级：gdt-release升级至2.3.9.1，广点通SDK升级为4.310.1180；
+  3. 头条平台SDK升级：toutiao-release升级至2.4.12.1，头条SDK升级为3.3.0.9；
+  4. oaid升级至1.0.25；
 * 2020-09-08
   1. 艾狄墨搏平台SDK升级：已知问题优化；
   2. 广点通平台SDK升级：gdt-release升级至2.3.8.1，广点通SDK升级为4.232.1102；
